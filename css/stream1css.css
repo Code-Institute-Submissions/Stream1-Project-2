@@ -1,0 +1,102 @@
+
+/* This is currently a placemarker for layout purposes */
+	#headerImage{
+		height: 5em;
+		background-color: yellow;
+		}
+
+
+
+
+/* This is CSS to over-ride bootstraps default CSS so the site can be responsive with regard to text 
+   size as well as layout
+
+   There is no inital media query since Bootstrap is "mobile first" and so will use the intial values unless
+   ones are set for a bigger screen size.
+*/
+
+
+/* Extra small devices (phones, up to 480px) */
+ 
+
+   h2  {
+            font-size: 1.0em;
+            font-weight: bold;
+        }	
+
+    p  {
+            font-size: 0.8em;
+        }	
+
+	li {
+		    font-size: 0.8em;
+	}
+
+	a.navbar-brand{
+		font-size: 1.0em;	
+	}
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+    h2  {
+            font-size: 1.2em;
+    }
+
+	p  {
+            font-size: 1.2em;
+    }	
+
+	li {
+		    font-size: 1.2em;
+	}
+
+	a.navbar-brand{
+		font-size: 1.2em;	
+	}
+
+	#headerImage{
+		background-color: red;
+		height: 5em;		
+	}
+
+}
+
+
+/* tablets/desktops and up ----------- */
+/* 'and (max-width: 1199px)' taken out as this will be the max width catered for */
+@media (min-width: 992px) { 
+
+    h2  {
+            font-size: 1.5em;
+        }
+
+	p  {
+            font-size: 1.5em;
+        }	
+
+	li {
+		    font-size: 1.5em;
+	}
+
+	a.navbar-brand{
+		font-size: 1.5em;	
+	}
+
+
+	#headerImage{
+		background-color: green;
+		height: 8em;
+	}
+
+}
+
+/* It is felt the largest screen size will be catered for in this design with the above 
+   value, so removing below */
+/* large desktops and up ----------- 
+@media screen and (min-width: 1200px) {
+}
+*/
