@@ -1,9 +1,11 @@
 
 /* This is currently a placemarker for layout purposes */
 	#headerImage{
-		height: 5em;
-		background-color: yellow;
-		}
+    	width:100%;
+    	background-repeat: no-repeat;
+
+    	/* background-size: cover; ? */
+	}
 
 
 
@@ -41,6 +43,10 @@
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
 
+ 	/* class="img-responsive" wasn't suitable in this case, so using step values*/
+
+
+
 
     h2  {
             font-size: 1.2em;
@@ -58,10 +64,8 @@
 		font-size: 1.2em;	
 	}
 
-	#headerImage{
-		background-color: red;
-		height: 5em;		
-	}
+
+
 
 }
 
@@ -86,11 +90,6 @@
 		font-size: 1.5em;	
 	}
 
-
-	#headerImage{
-		background-color: green;
-		height: 8em;
-	}
 
 }
 

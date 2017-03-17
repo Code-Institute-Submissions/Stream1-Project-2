@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Site Template</title>
+	<title>Photo Gallery Testing</title>
 </head>
 
 
@@ -112,17 +112,16 @@
 
 		<button id=previousPhoto>Previous Photo</button>	
 	</div>
-
-
+	<br>
+	<br>
 	<div>
 		<button id=fleet>Fleet Photos</button>
-
 		<button id=swanage>Swanage Photos</button>	
-
 		<button id=caesarsCamp>Caesars Camp</button>	
 	</div>
-
-
+	<br>
+	<br>
+	
 	<!-- The Modal -->
 	<div id="myModal" class="modal">
   		<span class="close">x</span>
@@ -274,8 +273,8 @@ swanage.onclick = function() {
 	//initialising view to this view on this click (rather than needing a second button click to start new photots apearing)
 	document.getElementById("myImg").src = whichGallery[count].src;
     document.getElementById("myImg").alt = whichGallery[count].alt;	
-	console.log(whichGallery);
-	console.log(whichGallery[0]);
+	//console.log(whichGallery);
+	//console.log(whichGallery[0]);
 	enableNextPrev();
 };
 
@@ -287,8 +286,8 @@ fleet.onclick = function() {
 	//refactoring potential
 	document.getElementById("myImg").src = whichGallery[count].src;
     document.getElementById("myImg").alt = whichGallery[count].alt;	
-	console.log(whichGallery);	
-	console.log(whichGallery[0]);
+	//console.log(whichGallery);	
+	//console.log(whichGallery[0]);
 	enableNextPrev();
 };
 
@@ -300,8 +299,8 @@ caesarsCamp.onclick = function() {
 	//refactoring potential
 	document.getElementById("myImg").src = whichGallery[count].src;
     document.getElementById("myImg").alt = whichGallery[count].alt;	
-	console.log(whichGallery);	
-	console.log(whichGallery[0]);
+	//console.log(whichGallery);	
+	//console.log(whichGallery[0]);
 	enableNextPrev();
 };
 
