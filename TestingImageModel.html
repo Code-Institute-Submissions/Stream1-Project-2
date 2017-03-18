@@ -119,10 +119,9 @@
 		<button id=swanage>Swanage Photos</button>	
 		<button id=caesarsCamp>Caesars Camp</button>	
 	</div>
-	<br>
-	<br>
-	
-	<!-- The Modal -->
+
+
+	<!-- The (Initially Hidden)ds Modal -->
 	<div id="myModal" class="modal">
   		<span class="close">x</span>
   		<img class="modal-content" id="currentPhoto">
@@ -135,6 +134,7 @@
 //Disable next/previous buttons until a selection is made
 document.getElementById("nextPhoto").disabled = true;
 document.getElementById("previousPhoto").disabled = true;
+
 
 //create the Swanage gallery array
 var swanageGallery = [{
@@ -239,7 +239,6 @@ nextPhoto.onclick = function() {
 function enableNextPrev(){
 	document.getElementById("nextPhoto").disabled = false;
 	document.getElementById("previousPhoto").disabled = false;
-
 }
 
 
@@ -303,6 +302,7 @@ caesarsCamp.onclick = function() {
 	//console.log(whichGallery[0]);
 	enableNextPrev();
 };
+
 
 
 </script>
