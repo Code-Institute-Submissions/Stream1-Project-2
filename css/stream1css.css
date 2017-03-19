@@ -1,15 +1,139 @@
+
+/********************************************************************/
+/********************************************************************/
+/*                      CSS for the JS page                         */
+/********************************************************************/
+/********************************************************************/
+
+	#myImg {
+  		border-radius: 5px;
+  		cursor: pointer;
+  		transition: 0.3s;
+	}
+
+/* This can't be used for mobile design - not essential for core functionality so keeping in */
+	#myImg:hover {opacity: 0.7;}
+
+
+/* The Modal (background) */
+	.modal {
+  		display: none; /* Hidden by default */
+  		position: fixed; /* Stay in place */
+  		z-index: 1; /* Sit on top */
+		padding-top: 100px; /* Location of the box */
+    	left: 0;
+    	top: 0;
+    	width: 100%; /* Full width */
+    	height: 100%; /* Full height */
+    	overflow: auto; /* Enable scroll if needed */
+    	background-color: rgb(0,0,0); /* Fallback color */
+    	background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	}
+
+	/* Modal Content (image) */
+	.modal-content {
+	   	margin: auto;
+ 		display: block;
+   		width: 80%;
+   		max-width: 700px;
+	}
+
+	/* Caption of Modal Image */
+	#caption {
+   		margin: auto;
+   		display: block;
+   		width: 80%;
+   		max-width: 700px;
+   		text-align: center;
+   		color: #ccc;
+   		padding: 10px 0;
+   		height: 150px;
+	}
+
+	/* Add Animation */
+	.modal-content, #caption {    
+    	-webkit-animation-name: zoom;
+		-webkit-animation-duration: 0.6s;
+   		animation-name: zoom;
+   		animation-duration: 0.6s;
+	}
+
+	@-webkit-keyframes zoom {
+   		from {-webkit-transform: scale(0)} 
+   		to {-webkit-transform: scale(1)}
+	}
+
+	@keyframes zoom {
+   		from {transform: scale(0.1)} 
+   		to {transform: scale(1)}
+	}
+
+	/* The Close Button */
+	.close {
+   		position: absolute;
+   		top: 15px;
+   		right: 35px;
+   		color: #f1f1f1;
+   		font-size: 40px;
+   		font-weight: bold;
+   		transition: 0.3s;
+	}
+
+	/* change on hover for devices that cater for that, not core to the functionality so devices that can't cater for it won't be impacted */
+	.close:hover,
+	.close:focus {
+    	color: #bbb;
+    	text-decoration: none;
+    	cursor: pointer;
+	}
+
+	/* 100% Image Width on Smaller Screens */
+	@media only screen and (max-width: 700px){
+	   	.modal-content {
+       		width: 100%;
+   		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************************************************************************/
+/********************************************************************************************************/
+/********************************************************************************************************/
+
+
 /* Responsive image header settings*/
 	#headerImage{
-    	width:100%;
-    	background-repeat: no-repeat;
-   	    background-size: cover;
+   		width:100%;
+   		background-repeat: no-repeat;
+    	background-size: cover;
+	}
+
+
+	#myImg {
+	  	width: 15em;
+	  	height: 10em;
 	}
 
 /* Declaring the root elements size in an absolute/fixed value, so by using rem there is a consistent 
    reference point from which size changes take place across devices/pages */
-html {
-	font-size: 12px;
-}
+	html {
+		font-size: 12px;
+	}
 
 
 /***********************************************************************************************************/
@@ -21,6 +145,8 @@ html {
    ones are set for a bigger screen size. */
 
 /* Extra small devices (phones, up to 480px) */
+/*                 col-xs-*                  */
+
 
    h2  {
             font-size: 1.0rem;
@@ -40,7 +166,9 @@ html {
 	}
 
 
+
 /* Small devices (tablets, 768px to 991px) */
+/*                 col-sm-*                */
 @media (min-width: 768px) and (max-width: 991px) {
 
  	/* class="img-responsive" wasn't suitable in this case, so using step values*/
@@ -60,10 +188,17 @@ html {
 	a.navbar-brand{
 		font-size: 1.1rem;	
 	}
+
+
+	#myImg {
+	  	width: 20em;
+	  	height: 15em;
+	}
 }
 
 
 /* Medium devices (tablets/desktops, 992px to 1199px) */
+/*                        col-md-*                    */
 @media (min-width: 992px) { 
 
     h2  {
@@ -81,10 +216,16 @@ html {
 	a.navbar-brand{
 		font-size: 1.2rem;	
 	}
+
+	#myImg {
+	  	width: 25em;
+	  	height: 20em;
+	}
 }
 
 
 /* Large devices (large desktops 1200px and above) */
+/*                    col-lg-*                     */
 @media screen and (min-width: 1200px) {
 
     h2  {
@@ -102,6 +243,10 @@ html {
 	a.navbar-brand{
 		font-size: 1.3rem;	
 	}
-}
 
+	#myImg {
+	  	width: 30em;
+	  	height: 25em;
+	}
+}
 

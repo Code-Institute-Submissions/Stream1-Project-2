@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This code will be comment heavy because I wish to illustrate I understand the code (rather than have just blindly copied pasted) and also so that it is clear to me when I return -->
+
+	<!-- Setting character encoding for the page and enables browser to know what to use to render page -->
+	<meta charset="utf-8">
+	
+	<!-- Setting browser/viewport to be width of device  -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Media Page</title>
+	<!-- Pulling in the bootstrap minified CSS library -->
+	<link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css'/>
+	<!-- Pulling in the my CSS library -->
+	<link rel='stylesheet' type='text/css' href="css/stream1css.css">
+</head>
+<body>
+
+
+	<!-- The overall bootstrap container - all bootstrap activity goes on within it -->
+	<div class="container">
+
+		<div >
+			 <!-- Using bootstraps img-responsive" so pic responds automatically to different devices -->
+			 <img id="headerImage" src="img/LeeOnSolent_BannerPic.jpg" class="img-responsive" alt="Lee on Solent Sunset">   
+		</div>
+
+		<!-- Bootstraps responsive and collapsable menu -->
+		<nav class="navbar navbar-inverse">
+		  	<div class="navbar-header">
+				<a class="navbar-brand" href="#">PC Photography</a>
+        		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myCollapsingList">
+					<span class="icon-bar"></span>
+       				<span class="icon-bar"></span>
+       				<span class="icon-bar"></span>
+        		</button>
+			</div>
+			<ul id="myCollapsingList" class ="nav navbar-nav collapse navbar-collapse navbar-right">
+				<li><a href="Home.html">Home</a></li>
+				<li><a href="Media.html">Media</a></li>
+				<li><a href="Profile.html">Profile</a></li>
+				<li><a href="Contact.html">Contact</a></li>
+				<li><a href="Explaination.html">Contact</a></li>				
+			</ul>
+		</nav>
+
+		<!-- Creating one row to hold the image viewer  -->
+	<!-- This will need to change -->
+	<div class="row">
+
+		<div class="col-xs-12">		
+			<h2>Photo Gallery Player</h2>		
+			<p>This text should come out nicely from left to right</p>
+
+		</div>
+
+		<!-- Using the bootstrap text-center class -->
+		<div class="col-xs-12 text-center">		
+
+			<img id="myImg" src="img/initialPhotoViewerPic.jpg" alt="Cover Picture pre photo location selection">
+
+			<div>
+				<button id=nextPhoto>Next Photo</button>
+
+				<button id=previousPhoto>Previous Photo</button>	
+			</div>
+
+			<br>
+			<br>
+			<div>
+				<button id=fleet>Fleet Photos</button>
+				<button id=swanage>Swanage Photos</button>	
+				<button id=caesarsCamp>Caesars Camp</button>	
+			</div>
+
+
+			<!-- The (Initially Hidden)ds Modal -->
+			<div id="myModal" class="modal">
+	  			<span class="close">x</span>
+  				<img class="modal-content" id="currentPhoto">
+  				<div id="caption"></div>
+			</div>
+		</div>	
+	</div>
+
+
+
+	<footer class="col-12 text-center">
+		<h2>Footer</h2>
+		<p>Need to add info in here!</p>
+	</footer>
+</div>
+
+
+
+</body>
+	<script src='http://code.jquery.com/jquery.min.js'></script>
+	<script src='bootstrap/js/bootstrap.min.js'></script>
+
+	<!-- Site specific js -->
+	<script src='js/stream1js.js'></script>
+
+</html>
+
+

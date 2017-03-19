@@ -2,6 +2,8 @@
 
 ## Overview
 
+	I have deliberatly not used some bootstrap functionality, such as carousel as I wanted to set myself a JS challange of producing my own.
+
 
 ### What is this app for?
 
