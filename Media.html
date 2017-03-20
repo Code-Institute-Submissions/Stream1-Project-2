@@ -62,17 +62,29 @@
 
 			<img id="myImg" src="img/initialPhotoViewerPic.jpg" alt="Cover Picture pre photo location selection"width="600" height="400">
 
+			<!-- Bespoke class added to apply margin around bootstrap buttons -->
 			<div class="btn-space">  
-				<button id="nextPhotoBtn">Next Photo sm</button>
-				<button id="previousPhotoBtn">Previous Photo sm</button>	
+				<button id="previousPhotoBtnLg" class="btn btn-default hidden-xs hidden-sm">Previous Photo</button>	
+				<button id="nextPhotoBtnLg"  class="btn btn-default hidden-xs hidden-sm">Next Photo</button>
+				<button id="previousPhotoBtnSm" class="glyphicon glyphicon-chevron-left hidden-md hidden-lg"></button>	
+				<button id="nextPhotoBtnSm" class="glyphicon glyphicon-chevron-right hidden-md hidden-lg"></button>
+
 			</div>
 
+			<!-- Bespoke class added to apply margin around bootstrap buttons -->
 			<div class="btn-space">
-				<button id="fleetBtn">Fleet Photos lg</button>
-				<button id="swanageBtn">Swanage Photos lg</button>	
-				<button id="caesarsCampBtn">Caesars Camp lg</button>	
+				<button id="fleetBtnLg" class="hidden-xs hidden-sm">Fleet Photos</button>
+				<button id="swanageBtnLg" class="hidden-xs hidden-sm">Swanage Photos</button>	
+				<button id="caesarsCampBtnLg" class="hidden-xs hidden-sm">Caesars Camp</button>	
 			</div>
-
+	
+			<!-- Span used to apply CSS font changes for small devices to each options displayed name -->
+			<span id="trackFontChange">
+				<!-- Radio buttons for small device use -->
+				<label class="radio-inline hidden-md hidden-lg"><input type="radio" name="optradio" id="fleetBtnSm">Fleet</label>
+				<label class="radio-inline hidden-md hidden-lg"><input type="radio" name="optradio" id="swanageBtnSm">Swanage</label>
+				<label class="radio-inline hidden-md hidden-lg"><input type="radio" name="optradio" id="caesarsBtnSm">Caesars</label> 
+			</span>		
 
 			<!-- The (Initially Hidden) Modal -->
 			<div id="myModal" class="modal">
@@ -83,8 +95,7 @@
 		</div>	
 	</div>
 
-
-
+	<!-- Bootstrap doesn't have a footer class, so implement own one -->
 	<footer class="col-12 text-center">
 		<h2>Footer</h2>
 		<p>Need to add info in here!</p>

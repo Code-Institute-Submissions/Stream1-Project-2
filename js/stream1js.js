@@ -1,5 +1,4 @@
 
-
 //create the Swanage gallery array
 var swanageGallery = [{
 		src: "img/Swanage/Swanage1.jpg",
@@ -15,7 +14,6 @@ var swanageGallery = [{
 		src: "img/Swanage/Swanage3.jpg",
 		alt:"Swanage Pic3"
 	}
-
 ]; 
 
 //create the Fleet Gallery array
@@ -52,14 +50,21 @@ var caesarsCampGallery = [{
 		src: "img/CaesarsCamp/CaesarsCamp3.jpg",
 		alt:"Caesars Camp Pic3"
 	}
-
 ]; 
 
 
-
 //Disable next/previous buttons until a selection is made
-document.getElementById("nextPhotoBtn").disabled = true;
-document.getElementById("previousPhotoBtn").disabled = true;
+if (document.getElementById("nextPhotoBtnLg")){
+	document.getElementById("nextPhotoBtnLg").disabled = true;
+	document.getElementById("previousPhotoBtnLg").disabled = true;
+}
+
+if (document.getElementById("nextPhotoBtnSm")){
+	document.getElementById("nextPhotoBtnSm").disabled = true;
+	document.getElementById("previousPhotoBtnSm").disabled = true;
+}
+
+
 //Set flag to manage state of next/previous buttons (rather than executing) 
 //command to set disabled to false every mouse click. See function 
 // getInitialPhotoVals() for clarity.
@@ -75,7 +80,7 @@ var count = 0;
 //Event handler for myImg
 myImg.onclick = function(){
 	//Ensures the modal only gets launched when picture in viewer
-	if (document.getElementById("nextPhotoBtn").disabled === false){
+	if (document.getElementById("nextPhotoBtnLg").disabled === false){
 		//Set the model to become visable (and take up screen)
     	document.getElementById('myModal').style.display = "block";
     	//Set the viewable photo to be the photo within designated array variable 
@@ -95,18 +100,6 @@ span.onclick = function() {
 };
 
 
-// When the user clicks on Next Photo, show next photo
-nextPhotoBtn.onclick = function() { 
-	//cycle to next photo
-  	count = count +1;
-
-	//If reached end of array, go back to start
-	if (count === whichGallery.length){
-		count=0;
-	}
-	updateGallary();
-};
-
 
 //Updates Gallary with new image and new text
 function updateGallary(){
@@ -118,26 +111,18 @@ function updateGallary(){
 
 //Enable use of next and previous buttons by enabling them
 function enableNextPrev(){
-	document.getElementById("nextPhotoBtn").disabled = false;
-	document.getElementById("previousPhotoBtn").disabled = false;
+
+	//Enable the next/previous buttons
+	if (document.getElementById("nextPhotoBtnLg")){
+		document.getElementById("nextPhotoBtnLg").disabled = false;
+		document.getElementById("previousPhotoBtnLg").disabled = false;
+	}
+
+	if (document.getElementById("nextPhotoBtnSm")){
+		document.getElementById("nextPhotoBtnSm").disabled = false;
+		document.getElementById("previousPhotoBtnSm").disabled = false;
+	}
 }
-
-
-
-//Function for when the user clicks on 'Next Photo' the next photo is shown
-previousPhotoBtn.onclick = function() { 
-	//If reached end of array, go back to start of Array
-	//Array starts at 0, so -1 required off length value
-	if (count === 0){
-		count=(whichGallery.length -1);
-	}
-	else{
-		//cycle to previous photo
-	  	count = count -1;
-	}
-
-	updateGallary();
-};
 
 
 //Function to set the selected Gallary's array references to 0
@@ -162,6 +147,48 @@ function initialiseGallary(){
 }
 
 
+
+//Function for when the user clicks on 'Next Photo' the next photo is shown
+function previousPhotoBtnFunc() { 
+
+	//If reached end of array, go back to start of Array
+	//Array starts at 0, so -1 required off length value
+	if (count === 0){
+		count=(whichGallery.length -1);
+	}
+	else{
+		//cycle to previous photo
+	  	count = count -1;
+	}
+
+	updateGallary();
+}
+
+
+// When the user clicks on Next Photo, show next photo
+function nextPhotoBtnFunc() { 
+	//cycle to next photo
+  	count = count +1;
+
+	//If reached end of array, go back to start
+	if (count === whichGallery.length){
+		count=0;
+	}
+	updateGallary();
+}
+
+
+//Function for when the user clicks on 'Next Photo' the next photo is shown
+previousPhotoBtnLg.onclick = previousPhotoBtnFunc;
+previousPhotoBtnSm.onclick = previousPhotoBtnFunc;
+
+// When the user clicks on Next Photo, show next photo
+nextPhotoBtnLg.onclick = nextPhotoBtnFunc;
+nextPhotoBtnSm.onclick = nextPhotoBtnFunc;
+
+
+
+
 // Sets view to Swanage photo array and initialises it
 function swanageBtnFunc() { 
 	whichGallery = swanageGallery;
@@ -180,9 +207,12 @@ function caesarsCampBtnFunc() {
 	initialiseGallary();
 }
 
-
 // Event handlers being assigned named functions, this is to help
-// future functionality/responsiveness.
-swanageBtn.onclick = swanageBtnFunc;
-fleetBtn.onclick = fleetBtnFunc;
-caesarsCampBtn.onclick = caesarsCampBtnFunc;
+// reduce amount of duplicate code as both buttons per location
+// are initiating same function.
+swanageBtnLg.onclick = swanageBtnFunc;
+swanageBtnSm.onclick = swanageBtnFunc;
+fleetBtnLg.onclick = fleetBtnFunc;
+fleetBtnSm.onclick = fleetBtnFunc;
+caesarsCampBtnLg.onclick = caesarsCampBtnFunc;
+caesarsBtnSm.onclick = caesarsCampBtnFunc;

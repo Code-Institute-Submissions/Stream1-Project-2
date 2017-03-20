@@ -103,6 +103,7 @@
 
 	footer {
   		border-top: 0.4em solid black;
+  		margin-top: 2em;
 	}
 
 
@@ -160,6 +161,10 @@
             font-size: 1.0rem;
         }	
 
+	#trackFontChange  {
+            font-size: 1.0rem;
+    }
+
 	li {
 		    font-size: 1.0rem;
 	}
@@ -183,6 +188,10 @@
 	p  {
             font-size: 1.1rem;
     }	
+
+	#trackFontChange  {
+            font-size: 1.1rem;
+    }
 
 	li {
 		    font-size: 1.1rem;
