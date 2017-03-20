@@ -45,37 +45,36 @@
 			</ul>
 		</nav>
 
-		<!-- Creating one row to hold the image viewer  -->
+	
+	<!-- Creating one row to hold the image viewer  -->
 	<!-- This will need to change -->
 	<div class="row">
 
+		<!-- The bootstrap entry below is required to pull text into bootstrap container (and keep it tidy) -->
 		<div class="col-xs-12">		
 			<h2>Photo Gallery Player</h2>		
 			<p>This text should come out nicely from left to right</p>
 
 		</div>
 
-		<!-- Using the bootstrap text-center class -->
+		<!-- Using the bootstrap text-center class to centralise all content in div -->
 		<div class="col-xs-12 text-center">		
 
-			<img id="myImg" src="img/initialPhotoViewerPic.jpg" alt="Cover Picture pre photo location selection">
+			<img id="myImg" src="img/initialPhotoViewerPic.jpg" alt="Cover Picture pre photo location selection"width="600" height="400">
 
-			<div>
-				<button id=nextPhoto>Next Photo</button>
-
-				<button id=previousPhoto>Previous Photo</button>	
+			<div class="btn-space">  
+				<button id="nextPhotoBtn">Next Photo sm</button>
+				<button id="previousPhotoBtn">Previous Photo sm</button>	
 			</div>
 
-			<br>
-			<br>
-			<div>
-				<button id=fleet>Fleet Photos</button>
-				<button id=swanage>Swanage Photos</button>	
-				<button id=caesarsCamp>Caesars Camp</button>	
+			<div class="btn-space">
+				<button id="fleetBtn">Fleet Photos lg</button>
+				<button id="swanageBtn">Swanage Photos lg</button>	
+				<button id="caesarsCampBtn">Caesars Camp lg</button>	
 			</div>
 
 
-			<!-- The (Initially Hidden)ds Modal -->
+			<!-- The (Initially Hidden) Modal -->
 			<div id="myModal" class="modal">
 	  			<span class="close">x</span>
   				<img class="modal-content" id="currentPhoto">
