@@ -5,11 +5,17 @@
 /********************************************************************/
 /********************************************************************/
 
+	/* Photo viewer */
 	#myImg {
   		border-radius: 5px;
   		cursor: pointer;
   		transition: 0.3s;
+  		border: 0.3em solid black;
+  		margin-bottom: 1em;
+	  	width: 15em;
+	  	height: 10em;
 	}
+
 
 /* This can't be used for mobile design - not essential for core functionality so keeping in */
 	#myImg:hover {opacity: 0.7;}
@@ -124,11 +130,6 @@
 	}
 
 
-	#myImg {
-	  	width: 15em;
-	  	height: 10em;
-	}
-
 /* Declaring the root elements size in an absolute/fixed value, so by using rem there is a consistent 
    reference point from which size changes take place across devices/pages */
 	html {
@@ -193,6 +194,9 @@
 	#myImg {
 	  	width: 20em;
 	  	height: 15em;
+  		border: 0.4em solid black;
+  		margin-bottom: 1.5em;
+
 	}
 }
 
@@ -220,6 +224,9 @@
 	#myImg {
 	  	width: 25em;
 	  	height: 20em;
+		border: 0.5em solid black;
+  		margin-bottom: 2em;
+
 	}
 }
 
@@ -247,6 +254,26 @@
 	#myImg {
 	  	width: 30em;
 	  	height: 25em;
+		border: 0.6em solid black;
+  		margin-bottom: 2.5em;
+
+/*
+		border: 0.3em;
+  		margin-bottom: 1em;
+		-------------------
+		border: 0.4em solid black;
+  		margin-bottom: 1.5em;
+		-------------------
+		border: 0.5em solid black;
+  		margin-bottom: 2em;
+		---------------------
+		border: 0.6em solid black;
+  		margin-bottom: 2.5em;
+
+*/
+
+
+
 	}
 }
 
