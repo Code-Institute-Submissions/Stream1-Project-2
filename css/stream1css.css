@@ -1,7 +1,7 @@
 
 /********************************************************************/
 /********************************************************************/
-/*                      CSS for the JS page                         */
+/*                      CSS for the Media page                      */
 /********************************************************************/
 /********************************************************************/
 
@@ -116,10 +116,6 @@
 
 
 
-
-
-
-
 /********************************************************************************************************/
 /********************************************************************************************************/
 /********************************************************************************************************/
@@ -128,18 +124,35 @@
 /* Responsive video settings */
 /* From W3C - If the max-width property is set to 100%, the video player will scale down if it has to, 
    but never scale up to be larger than its original size: */
-video {
-    max-width: 50%;
-    height: auto;
-}
+	video {
+    	max-width: 50%;
+    	height: auto;
+	}
 
+	/* This is used to override bootstraps default styling of the navbar, so that it meets the image 
+	   plush, rather than having a slight gap is this border radius was kept in */
+	.navbar {
+    	-webkit-border-top-right-radius: 0;
+    	-moz-border-top-right-radius: 0;
+    	border-top-right-radius: 0;
+    	-webkit-border-top-left-radius: 0;
+    	-moz-border-top-left-radius: 0;
+    	border-top-left-radius: 0;
+	}
 
-
-/* Responsive image header settings*/
+	/* Responsive image header settings*/
 	#headerImage{
    		width:100%;
    		background-repeat: no-repeat;
     	background-size: cover;
+		/* 4px is used as that is what bootstrap uses for the responsive menu, so to tie up nicely, 
+		   using the same! */
+    	-webkit-border-top-right-radius: 4px;
+    	-moz-border-top-right-radius: 4px;
+    	border-top-right-radius: 4px;
+    	-webkit-border-top-left-radius: 4px;
+    	-moz-border-top-left-radius: 4px;
+    	border-top-left-radius: 4px;
 	}
 
 
