@@ -152,9 +152,9 @@ var span = document.getElementsByClassName("close")[0];
 
 
 //IF needed so only looks for myImg when on media page
-if (document.getElementById("span")){
+if (document.getElementById("modalClose")){
 	// When the user clicks on <span> (x), close the modal
-	span.onclick = function() { 
+	modalClose.onclick = function() { 
 	    document.getElementById('myModal').style.display = "none";
 	};
 }
