@@ -45,6 +45,12 @@ function validateForm(){
 		//Form is OK
 		document.getElementById('formSuccess').innerHTML = "   Successfully Submitted";
 		document.getElementById('formErrorMsg').innerHTML = "";		
+		//Clear form data
+		document.getElementById('fname').value = "";
+		document.getElementById('lname').value = "";
+		document.getElementById('email').value = "";
+		document.getElementById('date').value = "";
+		document.getElementById('phone').value = "";
 	}
 }
 
