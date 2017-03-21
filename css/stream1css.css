@@ -125,6 +125,16 @@
 /********************************************************************************************************/
 
 
+/* Responsive video settings */
+/* From W3C - If the max-width property is set to 100%, the video player will scale down if it has to, 
+   but never scale up to be larger than its original size: */
+video {
+    max-width: 50%;
+    height: auto;
+}
+
+
+
 /* Responsive image header settings*/
 	#headerImage{
    		width:100%;
