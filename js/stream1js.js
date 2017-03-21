@@ -1,4 +1,59 @@
 
+/************************************************************************************/
+/*       																			*/
+/*				           This is JS for the Contacts Page                         */
+/*       																			*/
+/************************************************************************************/
+// This function validates the date entered on the contact page before putting out a message to 
+// screen to say the form has been submitted
+//
+// *Could do more validation around months and day values having a max if had more time
+
+function validateForm(){
+	//create a new JS date object and create variables that represent today
+	var d = new Date();
+	var day = d.getDate();
+		//Month returns a value between 0-11 for month of year
+	var month = d.getMonth() + 1;
+	var year = d.getFullYear();
+
+	//Get recieved data and get it ready for processing
+	var recievedDate = document.getElementById('date').value;
+	var recievedDateSplit = recievedDate.split("/");
+
+	//If prior to this year, reject
+	if (recievedDateSplit[2] < year){
+		document.getElementById('formErrorMsg').innerHTML = "  Date in the past, please re-enter";
+		document.getElementById('formSuccess').innerHTML = "";
+	}
+	//OR If this year, but prior month, reject
+	else if (recievedDateSplit[2] == year && recievedDateSplit[1] < month){
+		document.getElementById('formErrorMsg').innerHTML = "  Date in the past, please re-enter";
+		document.getElementById('formSuccess').innerHTML = "";
+	} 
+	//OR If this year and this month, but prior day, reject
+	else if (recievedDateSplit[2] == year && recievedDateSplit[1] == month && recievedDateSplit[0] < day){
+		document.getElementById('formErrorMsg').innerHTML = "  Date in the past, please re-enter";
+		document.getElementById('formSuccess').innerHTML = "";
+	}	
+	//Need at least a days notice!
+	else if (recievedDateSplit[2] == year && recievedDateSplit[1] == month && recievedDateSplit[0] == day){
+		document.getElementById('formErrorMsg').innerHTML = "  I'll need at least a day, please re-enter";
+		document.getElementById('formSuccess').innerHTML = "";
+	}
+	else{
+		//Form is OK
+		document.getElementById('formSuccess').innerHTML = "   Successfully Submitted";
+		document.getElementById('formErrorMsg').innerHTML = "";		
+	}
+}
+
+
+/************************************************************************************/
+/*       																			*/
+/*	  			             This is JS for the Media Page                          */
+/*       																			*/
+/************************************************************************************/
 //create the Swanage gallery array
 var swanageGallery = [{
 		src: "img/Swanage/Swanage1.jpg",
@@ -76,29 +131,33 @@ var previousNextButtonsDisabled = "Yes";
 var count = 0;
 
 
-
-//Event handler for myImg
-myImg.onclick = function(){
-	//Ensures the modal only gets launched when picture in viewer
-	if (document.getElementById("nextPhotoBtnLg").disabled === false){
-		//Set the model to become visable (and take up screen)
-    	document.getElementById('myModal').style.display = "block";
-    	//Set the viewable photo to be the photo within designated array variable 
-    	//whichGallery in position of count
-    	document.getElementById("currentPhoto").src = whichGallery[count].src;
-    	document.getElementById("caption").innerHTML = whichGallery[count].alt;
-	}
-};
-
+//IF needed so only looks for myImg when on media page
+if (document.getElementById("myImg")){
+	//Event handler for myImg
+	myImg.onclick = function(){
+		//Ensures the modal only gets launched when picture in viewer
+		if (document.getElementById("nextPhotoBtnLg").disabled === false){
+			//Set the model to become visable (and take up screen)
+    		document.getElementById('myModal').style.display = "block";
+    		//Set the viewable photo to be the photo within designated array variable 
+    		//whichGallery in position of count
+    		document.getElementById("currentPhoto").src = whichGallery[count].src;
+    		document.getElementById("caption").innerHTML = whichGallery[count].alt;
+		}
+	};
+}
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-    document.getElementById('myModal').style.display = "none";
-};
 
+//IF needed so only looks for myImg when on media page
+if (document.getElementById("span")){
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() { 
+	    document.getElementById('myModal').style.display = "none";
+	};
+}
 
 
 //Updates Gallary with new image and new text
@@ -179,14 +238,19 @@ function nextPhotoBtnFunc() {
 
 
 //Function for when the user clicks on 'Next Photo' the next photo is shown
-previousPhotoBtnLg.onclick = previousPhotoBtnFunc;
-previousPhotoBtnSm.onclick = previousPhotoBtnFunc;
+//IF needed so only looks for myImg when on media page
+if (document.getElementById("previousPhotoBtnLg")){
+	previousPhotoBtnLg.onclick = previousPhotoBtnFunc;
+	previousPhotoBtnSm.onclick = previousPhotoBtnFunc;
+}
 
-// When the user clicks on Next Photo, show next photo
-nextPhotoBtnLg.onclick = nextPhotoBtnFunc;
-nextPhotoBtnSm.onclick = nextPhotoBtnFunc;
 
-
+//IF needed so only looks for myImg when on media page
+if (document.getElementById("nextPhotoBtnLg")){
+	// When the user clicks on Next Photo, show next photo
+	nextPhotoBtnLg.onclick = nextPhotoBtnFunc;
+	nextPhotoBtnSm.onclick = nextPhotoBtnFunc;
+}
 
 
 // Sets view to Swanage photo array and initialises it
@@ -210,9 +274,14 @@ function caesarsCampBtnFunc() {
 // Event handlers being assigned named functions, this is to help
 // reduce amount of duplicate code as both buttons per location
 // are initiating same function.
-swanageBtnLg.onclick = swanageBtnFunc;
-swanageBtnSm.onclick = swanageBtnFunc;
-fleetBtnLg.onclick = fleetBtnFunc;
-fleetBtnSm.onclick = fleetBtnFunc;
-caesarsCampBtnLg.onclick = caesarsCampBtnFunc;
-caesarsBtnSm.onclick = caesarsCampBtnFunc;
+
+//IF needed so only looks for myImg when on media page
+if (document.getElementById("swanageBtnLg")){
+	swanageBtnLg.onclick = swanageBtnFunc;
+	swanageBtnSm.onclick = swanageBtnFunc;
+	fleetBtnLg.onclick = fleetBtnFunc;
+	fleetBtnSm.onclick = fleetBtnFunc;
+	caesarsCampBtnLg.onclick = caesarsCampBtnFunc;
+	caesarsBtnSm.onclick = caesarsCampBtnFunc;	
+}
+

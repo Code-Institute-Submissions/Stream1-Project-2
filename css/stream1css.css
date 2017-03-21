@@ -143,6 +143,17 @@ video {
 	}
 
 
+/* Error msg when date on form on contact page is in the past */
+#formErrorMsg{
+	margin-top: 1em;
+	color: red;
+}
+
+/* Message on successful form validation */
+#formSuccess{
+	color: green;
+}
+
 /* Declaring the root elements size in an absolute/fixed value, so by using rem there is a consistent 
    reference point from which size changes take place across devices/pages */
 	html {
@@ -171,7 +182,7 @@ video {
             font-size: 1.0rem;
         }	
 
-	#trackFontChange  {
+	.trackFontChange  {
             font-size: 1.0rem;
     }
 
@@ -199,7 +210,7 @@ video {
             font-size: 1.1rem;
     }	
 
-	#trackFontChange  {
+	.trackFontChange  {
             font-size: 1.1rem;
     }
 
@@ -234,7 +245,7 @@ video {
             font-size: 1.2rem;
         }	
 
-	#trackFontChange  {
+	.trackFontChange  {
             font-size: 1.2rem;
     }
 
@@ -272,7 +283,7 @@ video {
 		    font-size: 1.3rem;
 	}
 
-	#trackFontChange  {
+	.trackFontChange  {
             font-size: 1.3rem;
     }
 

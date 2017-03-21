@@ -13,11 +13,13 @@
 
 ### How does it work
 - Uses a bootstrap responsive menu (based on solution from Code Institute)
-	- Text has been made response to different viewports/devices
-	- Brand/Menu Headings
+	- Text (including Brand/Menu Headings and form headings has been made response to different viewports/devices
+	- 
 
 - Maybe uses Model image model viewer from W3C, how been adpated?
 		https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img
+		
+
 
 ## Features
 
