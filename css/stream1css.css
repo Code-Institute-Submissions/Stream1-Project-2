@@ -234,6 +234,10 @@ video {
             font-size: 1.2rem;
         }	
 
+	#trackFontChange  {
+            font-size: 1.2rem;
+    }
+
 	li {
 		    font-size: 1.2rem;
 	}
@@ -267,6 +271,10 @@ video {
 	li {
 		    font-size: 1.3rem;
 	}
+
+	#trackFontChange  {
+            font-size: 1.3rem;
+    }
 
 	a.navbar-brand{
 		font-size: 1.3rem;	
