@@ -1,4 +1,12 @@
 
+
+
+
+/* Reducing font to prevent wrap on minmized Chrome view */
+.photoViewerRadButn{
+	font-size: 0.7em;	
+}
+
 /*****************************************************************************************************************************/
 /* There is no inital media query since a "mobile first" approach is being taken and so the intial values will be used       */
 /* unless ones are subsequently set for a bigger screen size.                                                                */
@@ -201,6 +209,24 @@ video {
 	color: green;
 	}
 
+.picsOnHomePage{
+		height: 6em;
+		width: 11em;	
+		margin: 0.2em;
+		border-radius: 0.5rem;
+	}
+
+
+.logoOnProfilePage{
+		width: 4.0rem;
+		height: 4.0rem;
+		float: left;
+		border: 0.2rem solid rgb(228, 228, 228);
+		border-radius: 0.5rem;
+		margin: 0 0.4rem 0.1rem 0.1rem;
+	}
+
+	
 
 
 /********************************************/
@@ -269,6 +295,27 @@ video {
 	.modal-content {
      	width: 80%;
    	}
+
+
+	.logoOnProfilePage{
+		width: 4.0rem;
+		height: 4.0rem;
+		float: left;
+		border: 0.2rem solid rgb(228, 228, 228);
+		border-radius: 0.5rem;
+		margin: 0 0.4rem 0.2rem 0.2rem;
+	}
+
+	#pigeonMail{
+		height: 22rem;	
+		width: 22rem;	
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 3rem;
+		border: 0.3rem solid black;
+	}
+
+
 }
 
 
@@ -337,6 +384,30 @@ video {
 	.modal-content {
      	width: 80%;
    	}
+
+	.picsOnHomePage{
+		height: 8em;
+		width: 14em;	
+		margin: 0.4em;
+	}
+
+	.logoOnProfilePage{
+		width: 4.5rem;
+		height: 4.5rem;
+		float: left;
+		border: 0.2rem solid rgb(228, 228, 228);
+		border-radius: 0.5rem;
+		margin: 0 0.4rem 0.3rem 0.3rem;
+	}
+
+	#pigeonMail{
+		height: 23rem;	
+		width: 23rem;	
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 3rem;
+		border: 0.4rem solid black;
+	}
 }
 
 
@@ -404,5 +475,28 @@ video {
 	.modal-content {
      	width: 80%;
    	}
-}
 
+	.picsOnHomePage{
+		height: 11em;
+		width: 19em;	
+		margin: 0.5em;
+	}
+
+	.logoOnProfilePage{
+		width: 5rem;
+		height: 5rem;
+		float: left;
+		border: 0.2rem solid rgb(228, 228, 228);
+		border-radius: 0.5rem;
+		margin: 0 0.4rem 0.4rem 0.4rem;
+	}
+
+	#pigeonMail{
+		height: 24rem;	
+		width: 24rem;	
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 3rem;
+		border: 0.5rem solid black;
+	}	
+}

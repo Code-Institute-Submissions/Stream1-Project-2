@@ -44,20 +44,25 @@
 			</ul>
 		</nav>
 
+
+		<div class="row">
+			<div class="col-xs-12">		
+				<h1>Media Page</h1>
+				<p>This page presents photos taken, which can be viewed through the photoviewer, plus a video which can be played through the HTML5 embedded media player.</p>
+			</div>
+		</div>			
 	
 		<!-- Creating one row to hold the image viewer  -->
 		<!-- This will need to change -->
 		<div class="row">
-
 			<!-- The bootstrap entry below is required to pull text into bootstrap container (and keep it tidy) 
 			 it also means that the text is 'normal' left paginated, rather than centralised                -->
 			<div class="col-xs-12">		
-				<h1>Photo Gallery Player:</h1>
+				<h2>Photo Gallery Player:</h2>
 			</div>	
 
 			<!-- Using the bootstrap text-center class to centralise all content in div -->
 			<div class="col-xs-12 text-center">		
-
 				<!-- Added to break up page a little -->
 				<div class="mediaPageBackgrounds">
 
@@ -80,9 +85,14 @@
 		
 						<!-- Span used to apply CSS font changes for small devices to each options displayed name -->
 						<!-- Radio buttons for small device use -->
-						<label class="radio-inline hidden-md hidden-lg"><input type="radio" name="optradio" id="fleetBtnSm"><span class="trackFontChange">Fleet</span></label>
-						<label class="radio-inline hidden-md hidden-lg"><input type="radio" name="optradio" id="swanageBtnSm"><span class="trackFontChange">Swanage</span></label>
-						<label class="radio-inline hidden-md hidden-lg"><input type="radio" name="optradio" id="caesarsBtnSm"><span class="trackFontChange">Caesars</span></label> 
+						<label class="radio-inline hidden-md hidden-lg">
+						<input type="radio" name="optradio" id="fleetBtnSm"><span class="photoViewerRadButn">Fleet</span></label>
+
+						<label class="radio-inline hidden-md hidden-lg">
+						<input type="radio" name="optradio" id="swanageBtnSm"><span class="photoViewerRadButn">Swanage</span></label>
+
+						<label class="radio-inline hidden-md hidden-lg">
+						<input type="radio" name="optradio" id="caesarsBtnSm"><span class="photoViewerRadButn">Caesars</span></label> 
 					</div>
 					<!-- The (Initially Hidden) Modal -->
 					<div id="myModal" class="modal">
@@ -99,7 +109,7 @@
 		<div class="row">
 			<!-- The bootstrap entry below is required to pull text into bootstrap container (and keep it tidy) -->
 			<div class="col-xs-12">		
-				<h1>Video Player:</h1>		
+				<h2>Video Player:</h2>		
 			</div>
 			<!-- Using the bootstrap text-center class to centralise all content in div -->
 			<div class="col-xs-12 text-center">	
@@ -118,7 +128,7 @@
 		<!-- Bootstrap doesn't have a footer class, so implement own one -->
 		<footer class="text-center">
 			<h2>Website Developed by Paul Cheeseman</h2>
-			<p>This is a site has been developed through study with the Code Institute</p>
+			<p><em>This is a site has been developed through study with the Code Institute</em></p>
 		</footer>
 	</div>
 
