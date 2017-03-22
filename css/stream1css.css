@@ -121,6 +121,10 @@
 /********************************************************************************************************/
 
 
+.OUWebsiteText{
+	font-style: italic;
+}
+
 /* Responsive video settings */
 /* From W3C - If the max-width property is set to 100%, the video player will scale down if it has to, 
    but never scale up to be larger than its original size: */

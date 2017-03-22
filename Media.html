@@ -41,92 +41,86 @@
 				<li><a href="Media.html">Media</a></li>
 				<li><a href="Profile.html">Profile</a></li>
 				<li><a href="Contact.html">Contact</a></li>
-				<li><a href="Explaination.html">Explanation</a></li>
 			</ul>
 		</nav>
 
 	
-	<!-- Creating one row to hold the image viewer  -->
-	<!-- This will need to change -->
-	<div class="row">
+		<!-- Creating one row to hold the image viewer  -->
+		<!-- This will need to change -->
+		<div class="row">
 
-		<!-- The bootstrap entry below is required to pull text into bootstrap container (and keep it tidy) 
+			<!-- The bootstrap entry below is required to pull text into bootstrap container (and keep it tidy) 
 			 it also means that the text is 'normal' left paginated, rather than centralised                -->
-		<div class="col-xs-12">		
-			<h2>Photo Gallery Player</h2>		
-			<p>This text should come out nicely from left to right</p>
+			<div class="col-xs-12">		
+				<h2>Photo Gallery Player</h2>		
+				<p>This text should come out nicely from left to right</p>
 
-		</div>
+			</div>	
 
-		<!-- Using the bootstrap text-center class to centralise all content in div -->
-		<div class="col-xs-12 text-center">		
+			<!-- Using the bootstrap text-center class to centralise all content in div -->
+			<div class="col-xs-12 text-center">		
 
-			<img id="myImg" src="img/initialPhotoViewerPic.jpg" alt="Cover Picture pre photo location selection" width="600" height="400">
+				<img id="myImg" src="img/initialPhotoViewerPic.jpg" alt="Cover Picture pre photo location selection" width="600" height="400">
 
-			<!-- Bespoke class added to apply margin around bootstrap buttons -->
-			<div class="btn-space">  
-				<button id="previousPhotoBtnLg" class="btn btn-default hidden-xs hidden-sm">Previous Photo</button>	
-				<button id="nextPhotoBtnLg"  class="btn btn-default hidden-xs hidden-sm">Next Photo</button>
-				<button id="previousPhotoBtnSm" class="glyphicon glyphicon-chevron-left hidden-md hidden-lg"></button>	
-				<button id="nextPhotoBtnSm" class="glyphicon glyphicon-chevron-right hidden-md hidden-lg"></button>
+				<!-- Bespoke class added to apply margin around bootstrap buttons -->
+				<div class="btn-space">  
+					<button id="previousPhotoBtnLg" class="btn btn-default hidden-xs hidden-sm">Previous Photo</button>	
+					<button id="nextPhotoBtnLg"  class="btn btn-default hidden-xs hidden-sm">Next Photo</button>
+					<button id="previousPhotoBtnSm" class="glyphicon glyphicon-chevron-left hidden-md hidden-lg"></button>	
+					<button id="nextPhotoBtnSm" class="glyphicon glyphicon-chevron-right hidden-md hidden-lg"></button>
 
-			</div>
+				</div>
 
-			<!-- Bespoke class added to apply margin around bootstrap buttons -->
-			<div class="btn-space">
-				<button id="fleetBtnLg" class="btn btn-default hidden-xs hidden-sm">Fleet Photos</button>
-				<button id="swanageBtnLg" class="btn btn-default hidden-xs hidden-sm">Swanage Photos</button>	
-				<button id="caesarsCampBtnLg" class="btn btn-default hidden-xs hidden-sm">Caesars Camp</button>	
+				<!-- Bespoke class added to apply margin around bootstrap buttons -->
+				<div class="btn-space">
+					<button id="fleetBtnLg" class="btn btn-default hidden-xs hidden-sm">Fleet Photos</button>
+					<button id="swanageBtnLg" class="btn btn-default hidden-xs hidden-sm">Swanage Photos</button>	
+					<button id="caesarsCampBtnLg" class="btn btn-default hidden-xs hidden-sm">Caesars Camp</button>	
 	
-				<!-- Span used to apply CSS font changes for small devices to each options displayed name -->
-				<!-- Radio buttons for small device use -->
-				<label class="radio-inline hidden-md hidden-lg"><input type="radio" name="optradio" id="fleetBtnSm"><span class="trackFontChange">Fleet</span></label>
-				<label class="radio-inline hidden-md hidden-lg"><input type="radio" name="optradio" id="swanageBtnSm"><span class="trackFontChange">Swanage</span></label>
-				<label class="radio-inline hidden-md hidden-lg"><input type="radio" name="optradio" id="caesarsBtnSm"><span class="trackFontChange">Caesars</span></label> 
-			</div>
-			<!-- The (Initially Hidden) Modal -->
-			<div id="myModal" class="modal">
-	  			<span id="modalClose" class="close">x</span>
-	  			<!-- src included below for W3C validation purposes -->
-  				<img class="modal-content" id="currentPhoto" src="dummy" alt="Modal used to display photos">
-  				<div id="caption"></div>
-			</div>
-		</div>	
-	</div>
-
-
-	<div class="row">
-		<!-- The bootstrap entry below is required to pull text into bootstrap container (and keep it tidy) -->
-		<div class="col-xs-12">		
-			<h2>Video Player</h2>		
-			<p>This text should come out nicely from left to right</p>
+					<!-- Span used to apply CSS font changes for small devices to each options displayed name -->
+					<!-- Radio buttons for small device use -->
+					<label class="radio-inline hidden-md hidden-lg"><input type="radio" name="optradio" id="fleetBtnSm"><span class="trackFontChange">Fleet</span></label>
+					<label class="radio-inline hidden-md hidden-lg"><input type="radio" name="optradio" id="swanageBtnSm"><span class="trackFontChange">Swanage</span></label>
+					<label class="radio-inline hidden-md hidden-lg"><input type="radio" name="optradio" id="caesarsBtnSm"><span class="trackFontChange">Caesars</span></label> 
+				</div>
+				<!-- The (Initially Hidden) Modal -->
+				<div id="myModal" class="modal">
+	  				<span id="modalClose" class="close">x</span>
+	  				<!-- src included below for W3C validation purposes -->
+  					<img class="modal-content" id="currentPhoto" src="dummy" alt="Modal used to display photos">
+  					<div id="caption"></div>
+				</div>
+			</div>	
 		</div>
-		<!-- Using the bootstrap text-center class to centralise all content in div -->
-		<div class="col-xs-12 text-center">		
-			<video controls="controls">
-				<!-- Different encoding for different browsers -->
-				<source src="vid/Fleet_Pond_Leaves_MP4.mp4" type="video/mp4">	<!-- Chrome, Safari, IE -->
-				<source src="vid/Fleet_Pond_Leaves_OGV.ogv" type="video/ogv">	<!-- Firefox, Chrome, Opera -->
-				<source src="vid/Fleet_Pond_Leaves_WEBM.webm" type="video/webm">	<!-- Firefox, Chrome, Opera -->
-			</video>
+
+
+		<div class="row">
+			<!-- The bootstrap entry below is required to pull text into bootstrap container (and keep it tidy) -->
+			<div class="col-xs-12">		
+				<h2>Video Player</h2>		
+				<p>This text should come out nicely from left to right</p>
+			</div>
+			<!-- Using the bootstrap text-center class to centralise all content in div -->
+			<div class="col-xs-12 text-center">		
+				<video controls="controls">
+					<!-- Different encoding for different browsers -->
+					<source src="vid/Fleet_Pond_Leaves_MP4.mp4" type="video/mp4">	<!-- Chrome, Safari, IE -->
+					<source src="vid/Fleet_Pond_Leaves_OGV.ogv" type="video/ogv">	<!-- Firefox, Chrome, Opera -->
+					<source src="vid/Fleet_Pond_Leaves_WEBM.webm" type="video/webm">	<!-- Firefox, Chrome, Opera -->
+				</video>
+			</div>
 		</div>
+
+		<!-- Bootstrap doesn't have a footer class, so implement own one -->
+		<footer class="text-center">
+			<h2>Website Developed by Paul Cheeseman</h2>
+			<p>This is a site has been developed through study with the Code Institute</p>
+		</footer>
 	</div>
-
-
-	<!-- Bootstrap doesn't have a footer class, so implement own one -->
-	<footer class="col-12 text-center">
-		<h2>Footer</h2>
-		<p>Need to add info in here!</p>
-	</footer>
-</div>
-
 
 	<script src='http://code.jquery.com/jquery.min.js'></script>
 	<script src='bootstrap/js/bootstrap.min.js'></script>
-
 	<!-- Site specific js -->
 	<script src='js/stream1js.js'></script>
 </body>
-
-
 </html>
