@@ -1,8 +1,7 @@
 # Code Institute Stream 1 Project
 
 ## Overview
-
-	I have deliberatly not used some bootstrap functionality, such as carousel as I wanted to set myself a JS challange of producing my own.
+This code is for a site that is required for the Stream 1 project 
 
 
 ### What is this app for?
@@ -13,6 +12,10 @@ This website is to show some of the front-end skills I have been developing thro
 
 
 ### How does it work
+
+	I have deliberatly not used some bootstrap functionality, such as carousel as I wanted to set myself a JS challange of producing my own.
+
+
 - Uses a bootstrap responsive menu (based on solution from Code Institute)
 	- Text (including Brand/Menu Headings and form headings has been made response to different viewports/devices
 	- Pictures being removed for smaller devices
