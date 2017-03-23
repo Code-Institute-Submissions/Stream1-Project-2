@@ -4,7 +4,7 @@
 
 /* Reducing font to prevent wrap on minmized Chrome view */
 .photoViewerRadButn{
-	font-size: 0.7em;	
+	font-size: 0.7rem;	
 }
 
 /*****************************************************************************************************************************/
@@ -48,8 +48,8 @@ a.navbar-brand{
 	}
 
 footer {
-		border-top: 0.4em solid black;
-  		margin-top: 2em;
+		border-top: 0.4rem solid black;
+  		margin-top: 2rem;
 	}
 
 /* Enables device font changes to be tracked across for elements not listed above */
@@ -59,7 +59,7 @@ footer {
 
 /* Gives a little space around adjacent buttons */
 .btn-space {
-	   	margin: 0.5em;
+	   	margin: 0.5rem;
 	}
 
 
@@ -76,7 +76,7 @@ footer {
 
 /* Responsive image header settings*/
 #headerImage{
-		margin-top: 0.5em;
+		margin-top: 0.5rem;
 		width:100%;
 		background-repeat: no-repeat;
   		background-size: cover;
@@ -90,10 +90,10 @@ footer {
 		border-radius: 5px;
 		cursor: pointer;
   		transition: 0.3s;
-  		border: 0.3em solid black;
-  		margin-bottom: 0.6em;
-	  	width: 15em;
-	  	height: 10em;
+  		border: 0.3rem solid black;
+  		margin-bottom: 0.6rem;
+	  	width: 15rem;
+	  	height: 10rem;
 	}
 
 
@@ -177,7 +177,7 @@ footer {
 
 .mediaPageBackgrounds{
 		background-color: rgb(228, 228, 228);	
-		padding: 0.6em;
+		padding: 0.6rem;
 		border-radius: 4px;
 	}
 
@@ -200,7 +200,7 @@ video {
 
 	/* Error msg when date on form on contact page is in the past on contact page */
 #formErrorMsg{
-	margin-top: 1em;
+	margin-top: 1rem;
 		color: red;
 	}
 
@@ -210,9 +210,9 @@ video {
 	}
 
 .picsOnHomePage{
-		height: 6em;
-		width: 11em;	
-		margin: 0.2em;
+		height: 6rem;
+		width: 11rem;	
+		margin: 0.2rem;
 		border-radius: 0.5rem;
 	}
 
@@ -263,7 +263,7 @@ video {
 	#headerImage{
 		/* 4px is used as that is what bootstrap uses for the responsive menu, so to tie up nicely, 
 		   using the same! */
-		margin-top: 1.0em;   
+		margin-top: 1.0rem;   
     	-webkit-border-top-right-radius: 4px;
     	-moz-border-top-right-radius: 4px;
     	border-top-right-radius: 4px;
@@ -275,15 +275,15 @@ video {
 
 
 	#myImg {
-	  	width: 17em;
-	  	height: 10em;
-  		border: 0.4em solid black;
-  		margin-bottom: 0.6em;
+	  	width: 17rem;
+	  	height: 10rem;
+  		border: 0.4rem solid black;
+  		margin-bottom: 0.6rem;
 	}
 
 	/* Putting in padding for presentation purposes */
 	.mediaPageBackgrounds{
-		padding: 0.6em;
+		padding: 0.6rem;
 	}
 
 	/* Changing font size across different devices */
@@ -307,8 +307,8 @@ video {
 	}
 
 	#pigeonMail{
-		height: 22rem;	
-		width: 22rem;	
+		height: 16rem;	
+		width: 16rem;	
 		margin-left: auto;
 		margin-right: auto;
 		border-radius: 3rem;
@@ -351,7 +351,7 @@ video {
 	#headerImage{
 		/* 4px is used as that is what bootstrap uses for the responsive menu, so to tie up nicely, 
 		   using the same! */
-		margin-top: 1.2em;   		   
+		margin-top: 1.2rem;   		   
     	-webkit-border-top-right-radius: 4px;
     	-moz-border-top-right-radius: 4px;
     	border-top-right-radius: 4px;
@@ -362,16 +362,16 @@ video {
 
 
 	#myImg {
-	  	width: 25em;
-	  	height: 15em;
-		border: 0.5em solid black;
-  		margin-bottom: 0.8em;
+	  	width: 25rem;
+	  	height: 15rem;
+		border: 0.5rem solid black;
+  		margin-bottom: 0.8rem;
 	}
 
 	
 	/* Putting in padding for presentation purposes */
 	.mediaPageBackgrounds{
-		padding: 0.8em;
+		padding: 0.8rem;
 	}
 
 	/* Changing font size across different devices */
@@ -386,9 +386,9 @@ video {
    	}
 
 	.picsOnHomePage{
-		height: 8em;
-		width: 14em;	
-		margin: 0.4em;
+		height: 8rem;
+		width: 14rem;	
+		margin: 0.4rem;
 	}
 
 	.logoOnProfilePage{
@@ -401,8 +401,8 @@ video {
 	}
 
 	#pigeonMail{
-		height: 23rem;	
-		width: 23rem;	
+		height: 18rem;	
+		width: 18rem;	
 		margin-left: auto;
 		margin-right: auto;
 		border-radius: 3rem;
@@ -440,7 +440,7 @@ video {
 	#headerImage{
 		/* 4px is used as that is what bootstrap uses for the responsive menu, so to tie up nicely, 
 		   using the same! */
-		margin-top: 1.5em;   		   
+		margin-top: 1.5rem;   		   
     	-webkit-border-top-right-radius: 4px;
     	-moz-border-top-right-radius: 4px;
     	border-top-right-radius: 4px;
@@ -451,17 +451,16 @@ video {
 
 
 	#myImg {
-	  	width: 32em;
-	  	height: 20em;
-		border: 0.6em solid black;
-  		margin-bottom: 1.0em;
-
+	  	width: 32rem;
+	  	height: 20rem;
+		border: 0.6rem solid black;
+  		margin-bottom: 1.0rem;
 	}
 
 
 	/* Putting in padding for presentation purposes */
 	.mediaPageBackgrounds{
-		padding: 1em;
+		padding: 1rem;
 	}
 
 	
@@ -477,9 +476,9 @@ video {
    	}
 
 	.picsOnHomePage{
-		height: 11em;
-		width: 19em;	
-		margin: 0.5em;
+		height: 11rem;
+		width: 19rem;	
+		margin: 0.5rem;
 	}
 
 	.logoOnProfilePage{
@@ -492,8 +491,8 @@ video {
 	}
 
 	#pigeonMail{
-		height: 24rem;	
-		width: 24rem;	
+		height: 18rem;	
+		width: 18rem;	
 		margin-left: auto;
 		margin-right: auto;
 		border-radius: 3rem;
