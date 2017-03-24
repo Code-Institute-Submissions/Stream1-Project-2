@@ -5,14 +5,15 @@
    maintainability.
 */
 
-var contact = (function (){
-
 	/* Module level variables to enable status of date
 	   components to be tracked by all functions*/
 	var isYearValid;
 	var isMonthValid;
 	var isDayValid;
 
+
+	function add1(){return 1+1;}
+	function add2(){return 2+2;}
 
 	//Creating a new JS date object, then variables, that represent today
 	function actualDate(){
@@ -129,25 +130,3 @@ var contact = (function (){
 	}
 
 
-	// Returning a single function from this module/function called (well, assigned to the variable 
-	// called) 'contact', this enables access to the validate form function outside of the scope of 
-	// this module. Without passing it back, it could not be invoked.
-	return {validateForm: function(){
-		//Nested to be more efficient, no point in executing subsequent function(s) if error detected
-		isYearValid = validateYear(receivedDate().year, actualDate().year);
-		//console.log("isYearValid: " +isYearValid);
-		if (isYearValid == "same" || isYearValid == "valid"){
-			isMonthValid = validateMonth(receivedDate().month, actualDate().month);
-			//console.log("isMonthValid: " +isMonthValid);
-			if (isMonthValid  == "same" || isMonthValid  == "valid"){
-				isDayValid = validateDay(receivedDate().day, actualDate().day);
-				//console.log("isDayValid: " +isDayValid);
-				if (isDayValid == "valid"){
-					//console.log("Form is fine");
-					successfulSubMsg();
-				}
-			}
-		}
-	}};
-
-})();

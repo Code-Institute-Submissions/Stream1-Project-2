@@ -1,62 +1,6 @@
 
 /************************************************************************************/
 /*       																			*/
-/*				           This is JS for the Contacts Page                         */
-/*       																			*/
-/************************************************************************************/
-// This function validates the date entered on the contact page before putting out a message to 
-// screen to say the form has been submitted
-//
-// *Could do more validation around months and day values having a max if had more time
-
-function validateForm(){
-	//create a new JS date object and create variables that represent today
-	var d = new Date();
-	var day = d.getDate();
-		//Month returns a value between 0-11 for month of year
-	var month = d.getMonth() + 1;
-	var year = d.getFullYear();
-
-	//Get recieved data and get it ready for processing
-	var recievedDate = document.getElementById('date').value;
-	var recievedDateSplit = recievedDate.split("/");
-
-	//If prior to this year, reject
-	if (recievedDateSplit[2] < year){
-		document.getElementById('formErrorMsg').innerHTML = "  Date in the past, please re-enter";
-		document.getElementById('formSuccess').innerHTML = "";
-	}
-	//OR If this year, but prior month, reject
-	else if (recievedDateSplit[2] == year && recievedDateSplit[1] < month){
-		document.getElementById('formErrorMsg').innerHTML = "  Date in the past, please re-enter";
-		document.getElementById('formSuccess').innerHTML = "";
-	} 
-	//OR If this year and this month, but prior day, reject
-	else if (recievedDateSplit[2] == year && recievedDateSplit[1] == month && recievedDateSplit[0] < day){
-		document.getElementById('formErrorMsg').innerHTML = "  Date in the past, please re-enter";
-		document.getElementById('formSuccess').innerHTML = "";
-	}	
-	//Need at least a days notice!
-	else if (recievedDateSplit[2] == year && recievedDateSplit[1] == month && recievedDateSplit[0] == day){
-		document.getElementById('formErrorMsg').innerHTML = "  I'll need at least a day, please re-enter";
-		document.getElementById('formSuccess').innerHTML = "";
-	}
-	else{
-		//Form is OK
-		document.getElementById('formSuccess').innerHTML = "   Successfully Submitted";
-		document.getElementById('formErrorMsg').innerHTML = "";		
-		//Clear form data
-		document.getElementById('fname').value = "";
-		document.getElementById('lname').value = "";
-		document.getElementById('email').value = "";
-		document.getElementById('date').value = "";
-		document.getElementById('phone').value = "";
-	}
-}
-
-
-/************************************************************************************/
-/*       																			*/
 /*	  			             This is JS for the Media Page                          */
 /*       																			*/
 /************************************************************************************/
