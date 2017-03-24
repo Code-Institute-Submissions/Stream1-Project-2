@@ -409,4 +409,3 @@ if (document.getElementById("swanageBtnLg")){
 	caesarsCampBtnLg.onclick = caesarsCampBtnFunc;
 	caesarsBtnSm.onclick = caesarsCampBtnFunc;	
 }
-
