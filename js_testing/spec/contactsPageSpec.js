@@ -14,6 +14,15 @@ describe("Contact Page Testing", function() {
     */
 
 
+    /*
+    //Why doesn't thiw work??
+    it("should return date obj", function() {
+      
+      expect(recievedDate()).toBe({day: 24, month: 3, year: 2017});
+    });
+    */
+
+
 
   describe("Validating the year", function() {
 
