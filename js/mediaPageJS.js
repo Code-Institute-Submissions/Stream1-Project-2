@@ -1,180 +1,15 @@
 
-/************************************************************************************/
-/*       																			*/
-/*	  			             This is JS for the Media Page                          */
-/*       																			*/
-/************************************************************************************/
-//create the Swanage gallery array
-var swanageGallery = [{
-		src: "img/Swanage/Swanage1.jpg",
-		alt:"Swanage: Sea with coast in distance"
-	},
-
-	{
-		src: "img/Swanage/Swanage2.jpg",
-		alt:"Swanage: Island at Sunset no.1"
-	},
-
-	{
-		src: "img/Swanage/Swanage3.jpg",
-		alt:"Swanage:  Island at Sunset no.2"
-	},
-
-	{
-		src: "img/Swanage/Swanage4.jpg",
-		alt:"Swanage: Island in distance bright sun"
-	},
-
-	{
-		src: "img/Swanage/Swanage5.jpg",
-		alt:"Swanage: Coastal cliffs with sea"
-	},
-
-		{
-		src: "img/Swanage/Swanage6.jpg",
-		alt:"Swanage: Coastal cliffs inland"
-	},
-
-	{
-		src: "img/Swanage/Swanage7.jpg",
-		alt:"Swanage: Bay from up high no.1"
-	},
-
-	{
-		src: "img/Swanage/Swanage8.jpg",
-		alt:"Swanage: Bay from up high no.2"
-	},
-
-	{
-		src: "img/Swanage/Swanage9.jpg",
-		alt:"Swanage: Coastal view with bench"
-	},
-
-	{
-		src: "img/Swanage/Swanage10.jpg",
-		alt:"Swanage: High up long coastal view"
-	},
-
-	{
-		src: "img/Swanage/Swanage11.jpg",
-		alt:"Swanage: Sea view with clouds"
-	}
-]; 
-
-//create the Fleet Gallery array
-var fleetGallery = [{
-		src: "img/Fleet/FleetPond1.jpg",
-		alt:"Fleet: Forrest in sun"
-	},
-
-	{
-		src: "img/Fleet/FleetPond2.jpg",
-		alt:"Fleet: Bridge over pond"
-	},
-
-	{
-		src: "img/Fleet/FleetPond3.jpg",
-		alt:"Fleet: Close up cobweb"
-	},
-
-	{
-		src: "img/Fleet/FleetPond4.jpg",
-		alt:"Fleet: Pond through trees no.1"
-	},
-
-	{
-		src: "img/Fleet/FleetPond5.jpg",
-		alt:"Fleet: Pond at sunset"
-	},
-
-	{
-		src: "img/Fleet/FleetPond6.jpg",
-		alt:"Fleet: Pont at sunset with sun"
-	},
-
-	{
-		src: "img/Fleet/FleetPond7.jpg",
-		alt:"Fleet: Pond viewing position"
-	},
-
-	{
-		src: "img/Fleet/FleetPond8.jpg",
-		alt:"Fleet: Pond through trees no.2"
-	},
-
-	{
-		src: "img/Fleet/FleetPond9.jpg",
-		alt:"Fleet: Close of up leaves"
-	},
-
-	{
-		src: "img/Fleet/FleetPond10.jpg",
-		alt:"Fleet: Stream in summer"
-	},
-
-	{
-		src: "img/Fleet/FleetPond11.jpg",
-		alt:"Fleet: Waterlogged in spring"
-	}
-]; 
+/* Creating a module (through the use of function scope) called 'contact' to encapsulate the 
+   associated functions and variables, thus eliminating the risk of variable/function pollution 
+   in the global scope. In addition it has benefit of grouping all associated code for easier 
+   maintainability.
+*/
 
 
-//create the Caesars Camp gallery array
-var caesarsCampGallery = [{
-		src: "img/CaesarsCamp/CaesarsCamp1.jpg",
-		alt:"Caesars Camp: Sunset view no.1"
-	},
+var media = (function (){
+// No functions need to be returned because the html page (or any other JS) doesn't call any, this module runs on page load, then 
+// listens for events, the page doesn't invoke any itself.
 
-	{
-		src: "img/CaesarsCamp/CaesarsCamp2.jpg",
-		alt:"Caesars Camp: Sunset view no.1"
-	},
-
-	{
-		src: "img/CaesarsCamp/CaesarsCamp3.jpg",
-		alt:"Caesars Camp: Sunset view with tree"
-	},
-
-	{
-		src: "img/CaesarsCamp/CaesarsCamp4.jpg",
-		alt:"Caesars Camp: Hill side view"
-	},
-
-	{
-		src: "img/CaesarsCamp/CaesarsCamp5.jpg",
-		alt:"Caesars Camp: High up view over trees"
-	},
-
-	{
-		src: "img/CaesarsCamp/CaesarsCamp6.jpg",
-		alt:"Caesars Camp: High up view over low land"
-	},
-
-	{
-		src: "img/CaesarsCamp/CaesarsCamp7.jpg",
-		alt:"Caesars Camp: High up with top of hill in shot"
-	},
-
-	{
-		src: "img/CaesarsCamp/CaesarsCamp8.jpg",
-		alt:"Caesars Camp: High up looking over purple and green"
-	},
-
-	{
-		src: "img/CaesarsCamp/CaesarsCamp9.jpg",
-		alt:"Caesars Camp: Autumnal hillside view"
-	},
-
-	{
-		src: "img/CaesarsCamp/CaesarsCamp10.jpg",
-		alt:"Caesars Camp: Autumnal view over trees"
-	},
-
-	{
-		src: "img/CaesarsCamp/CaesarsCamp11.jpg",
-		alt:"Caesars Camp: Autumnal path back down"
-	}
-]; 
 
 
 //Disable next/previous buttons until a selection is made
@@ -353,3 +188,6 @@ if (document.getElementById("swanageBtnLg")){
 	caesarsCampBtnLg.onclick = caesarsCampBtnFunc;
 	caesarsBtnSm.onclick = caesarsCampBtnFunc;	
 }
+
+
+})();

@@ -1,3 +1,4 @@
+  
 describe("Contact Page Testing", function() {
 
   /*
@@ -6,27 +7,38 @@ describe("Contact Page Testing", function() {
   */
 
 
+describe("Checking Date Functions", function() { 
+
+    //date object for tests to make sure todays date is used
+    var testDate = new Date();
+      //Month returns a value between 0-11 for month of year
+
+  describe("Checking Actual Date Function", function() { 
+    it("should return date obj for current day in required format", function() {
+        //toEqual is needed as comparing Objects
+        expect(actualDate()).toEqual({day: testDate.getDate(), month: testDate.getMonth()+1, year: testDate.getFullYear()});
+      });
+    });    
+
     /*
-    //Why doesn't thiw work??
-    it("should return date obj", function() {
-      expect(actualDate()).toBe({day: 24, month: 3, year: 2017});
+    //Numbers being returned as text issue
+    describe("Checking Recieved Date Function", function() { 
+      beforeEach(function(){
+        $('<div class="form-group"><label for="date"><span class="trackFontChange">Start Date of Project: </span><span class="trackFontChange" id="formErrorMsg"></span></label><input type="text" class="form-control" placeholder="Please enter mm/dd/yyyy (max year 2029)" id="date" value="26/3/2017"></div>').appendTo('body');
+      });
+       it("should return date obj for current day in required format", function() {
+        //toEqual is needed as comparing Objects
+        expect(receivedDate()).toEqual({day: testDate.getDate(), month: testDate.getMonth()+1, year: testDate.getFullYear()});
+      });
+
     });
     */
 
-
-    /*
-    //Why doesn't thiw work??
-    it("should return date obj", function() {
-      
-      expect(recievedDate()).toBe({day: 24, month: 3, year: 2017});
-    });
-    */
+  });
 
 
+  describe("Validating returned the year", function() {
 
-  describe("Validating the year", function() {
-
-    
     it("should return 'valid' if the recieved year (1st arg) is greater than current year", function() {
       expect(validateYear(2018, 2017)).toBe("valid");
     });
@@ -35,16 +47,28 @@ describe("Contact Page Testing", function() {
       expect(validateYear(2017, 2017)).toBe("same");
     });
 
+
+
+    /*
     // Cannot set inner HTML so errors, how to test
     //Inner HTML issue
-    /* it("should return 'invalid' if the recieved year (1st arg) is less than current year", function() {
-      expect(validateYear(2016, 2017)).toBe("invalid");
-    }); */
 
+     it("should return 'invalid' if the recieved year (1st arg) is less than current year", function() {
+
+      sandbox({
+        id: 'my-id',
+        class: 'my-class',
+        myattr: 'my-attr',
+        innerHTML: ''
+      });
+
+       expect(validateYear(2016, 2017)).toBe("invalid");
+    }); 
+    */
   });
 
 
-  describe("Validating the month", function() {
+  describe("Validating the returned month", function() {
   
     var isYearValid;
 
@@ -77,7 +101,7 @@ describe("Contact Page Testing", function() {
 
 
 
-  describe("Validating the Day", function() {
+  describe("Validating the returned Day", function() {
     
     /*
     //Inner HTML issue

@@ -169,7 +169,8 @@ footer {
 
 
 .mediaPageBackgrounds{
-		background-color: rgb(228, 228, 228);	
+		/* background-color: rgb(228, 228, 228);	*/
+		background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 		padding: 0.6em;
 		border-radius: 4px;
 	}
