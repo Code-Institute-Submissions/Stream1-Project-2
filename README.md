@@ -1,7 +1,7 @@
 # Code Institute Stream 1 Project
 
 ## Overview
-This code is for a site that is required for the Code Institute end of Stream 1 (Front end) project). It is to demonstrate an ability to code, test and deploy (to GitHub) a basic website that follows good practice. The website has the dual purpose of covering examination requirements while also illustrating my level of knowledge/competency to prospective employers.
+This code is for a site that is required for the Code Institute end of Stream 1 (Front end) project. It is to demonstrate an ability to code, test and deploy (to GitHub) a basic website that follows good practice. The website has the dual purpose of covering examination requirements while also illustrating my level of knowledge/competency to prospective employers.
 
 
 ## Functionality of the project
@@ -9,7 +9,7 @@ This code is for a site that is required for the Code Institute end of Stream 1 
 
 - The site also has a dummy 'contact me' form, for which I coded some JavaScript validation to supplement the HTML5 form input field validation, as the HTML5 form date validation as poor cross browser support*, and as such I didn't want to use it.
 
-- The site is highly responsive to different device types. Using Bootstraps inbuilt device size classes the pages adapt their layout to suit the device they are being viewed on. In addition to this, some of Bootstraps default CSS has been overwritten to additionally make site text and images responsive to different device types, extending the default responsiveness Bootstrap provides.
+- The site is highly responsive to different device types. Using Bootstraps inbuilt device size classes the pages adapt their layout to suit the device they are being viewed on. In addition to this, some of Bootstraps default CSS has been overwritten to make site text and images responsive to different device types, extending the default responsiveness Bootstrap provides.
 
 - The site takes advantage of HTML5 inbuilt form validation to ensure the data is submitted in the correct format.
 
@@ -25,16 +25,16 @@ This code is for a site that is required for the Code Institute end of Stream 1 
 - Jasmine (https://jasmine.github.io/)
 
 #### Coding concepts used
-- JavaScript concepts
-The different sections of JavaScript are modularised by encapsulating associated functions and variables within an outer module/function. Where external access is needed to the encapsulated JavaScript functions (on the media page), the code uses JavaScript closure and returns the required function, giving access the one function that is externally required. This approach ensures better maintainability of code within each module, ensures the global variable space isn't polluted and keeps the modules variables safe from variable pollution from other code.
+- **JavaScript concepts:**
+The different sections of JavaScript are modularised by encapsulating the associated functions and variables within an outer module/function. Where external access is needed to the encapsulated JavaScript functions (on the media page), the code uses JavaScript closure and returns the required function. This approach ensures better maintainability of code within each module, ensures the global variable space isn't polluted and keeps the modules variables safe from variable pollution from other code.
 
-- Model/View/Controller
-I have split out the data (photo arrays) from code as I wished to following the MVC principle of splitting out the View (HTML/CSS), the Model/Data (photo arrays) and Controller (JavaScript logic).
+- **Model/View/Controller:**
+I have split out the data (arrays of photos) from code as I wished to follow the MVC principle of splitting out the *View* (HTML/CSS), the *Model*/Data (arrays of photos) and *Controller* (JavaScript logic).
 
-#### None self-developed code used:
-- I used the model image model viewer from W3C (https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img), although I have heavily adapted it. The original was for one photo to be launched, I developed that use different arrays, have previous/next selectors and different locations to be selected.
+#### 3rd party code used:
+- I used the model image model viewer from W3C (https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img), although I have heavily adapted it. The original was designed for one photo to be launched, I have developed it to use different arrays enabling the use of previous/next selectors and locations to be chosen.
 
-- I used a bootstrap responsive menu, although I have adapted from its default to make it more responsive, as the text shown on the menu will change size depending on viewing device.
+- I used a bootstrap responsive menu, although I have adapted from its default design to make it more responsive. In this site the text shown on the menu will change size depending on the viewing device.
 
 
 #### Justification of approach
