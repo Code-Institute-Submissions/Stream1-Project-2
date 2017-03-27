@@ -18,7 +18,7 @@ This code is for a site that is required for the Code Institute end of Stream 1 
 
 
 ## Project Coding
-### Technologies used
+####Technologies used
 - HTML
 - CSS
 	- [Bootstrap](http://getbootstrap.com/)
@@ -26,20 +26,20 @@ This code is for a site that is required for the Code Institute end of Stream 1 
 - Jasmine (https://jasmine.github.io/)
 
 
-###Coding concepts used
-#### JavaScript concepts
+####Coding concepts used
+- JavaScript concepts
 The different sections of JavaScript are modularised by encapsulating associated functions and variables within an outer module/function. Where external access is needed to the encapsulated JavaScript functions (on the media page), the code uses JavaScript closure and returns the required function, giving access the one function that is externally required. This approach ensures better maintainability of code within each module, ensures the global variable space isn't polluted and keeps the modules variables safe from variable pollution from other code.
 
-#### Model/View/Controller 
+- Model/View/Controller
 I have split out the data (photo arrays) from code as I wished to following the MVC principle of splitting out the View (HTML/CSS), the Model/Data (photo arrays) and Controller (JavaScript logic).
 
-### None self-developed code used:
+#### None self-developed code used:
 - I used the model image model viewer from W3C (https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img), although I have heavily adapted it. The original was for one photo to be launched, I developed that use different arrays, have previous/next selectors and different locations to be selected.
 
 - I used a bootstrap responsive menu, although I have adapted from its default to make it more responsive, as the text shown on the menu will change size depending on viewing device.
 
 
-### Justification of approach
+#### Justification of approach
 - I decided to use JavaScript rather tha jQuery as I wished to understand some of the underlying language that supports the jQuery library, rather than start using jQuery immeditatly.
 
 - I decided not to use AngularJS for this project because this is a small site, and with the exception of bootstrap (as I wanted to develop a responsive site quickly), I wanted to build a site that had been handwritten. Although I have not used AngularJS, I have adhered to the MVC principle on which AngularJS is based.
