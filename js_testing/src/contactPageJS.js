@@ -28,6 +28,8 @@
 	}
 	
 
+
+
 	//Getting, and breaking down, input date reading for subsequent processing
 	function receivedDate(){
 		var receivedDate = document.getElementById('date').value;

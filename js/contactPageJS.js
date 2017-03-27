@@ -27,9 +27,7 @@ var contact = (function (){
 	}
 	
 
-	/*
-	HTML Issue
-	//Getting, and breaking down, input date reading for subsequent processing
+
 	function receivedDate(){
 		var receivedDate = document.getElementById('date').value;
 		var receivedDateSplit = receivedDate.split("/");
@@ -39,7 +37,6 @@ var contact = (function (){
 			"year" : receivedDateSplit[2],
 		};
 	}
-	*/
 
 	//Validating year, 'same' value is required for subsequent processing/comparison
 	function validateYear(receivedYear, currentYear){
