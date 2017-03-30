@@ -24,26 +24,50 @@ This code is for a site that is required for the Code Institute end of Stream 1 
 - JavaScript 
 - Jasmine (https://jasmine.github.io/)
 
-#### Coding concepts used
+#### Coding concepts used/followed
 - **JavaScript concepts:**
-The different sections of JavaScript are modularised by encapsulating the associated functions and variables within an outer module/function. Where external access is needed to the encapsulated JavaScript functions (on the media page), the code uses JavaScript closure and returns the required function. This approach ensures better maintainability of code within each module, ensures the global variable space isn't polluted and keeps the modules variables safe from variable pollution from other code.
+The different sections of JavaScript are modularised by encapsulating the associated functions and variables within an outer module/function. Where external access is needed to the encapsulated JavaScript functions (on the contact page), the code uses JavaScript closure and returns the required functions. This approach ensures better maintainability of code within each module, ensures the global variable space isn't polluted and keeps the modules variables/functions safe from variable pollution from other code.
 
 - **Model/View/Controller:**
 I have split out the data (arrays of photos) from code as I wished to follow the MVC principle of splitting out the *View* (HTML/CSS), the *Model*/Data (arrays of photos) and *Controller* (JavaScript logic).
 
-#### 3rd party code used:
-- I used the model image model viewer from W3C (https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img), although I have heavily adapted it. The original was designed for one photo to be launched, I have developed it to use different arrays enabling the use of previous/next selectors and locations to be chosen.
 
-- I used a bootstrap responsive menu, although I have adapted from its default design to make it more responsive. In this site the text shown on the menu will change size depending on the viewing device.
+
+#### 3rd party code used:
+- I used the image model viewer from W3C (https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img), although I have heavily adapted it. The original was designed for one photo to be launched, I have developed it to use different arrays enabling the use of previous/next selectors and locations to be chosen.
+
+- I used a bootstrap responsive menu, although I have adapted from its default design to make it more responsive. In this site the text shown on the menu will change size depending on the viewing device. In addition, where applicable, I changed the default Bootstrap div elements as HTML5 semantic elements for improved usability.
 
 
 #### Justification of approach
 - I decided to use JavaScript rather tha jQuery as I wished to understand some of the underlying language that supports the jQuery library, rather than start using jQuery immediately.
 
-- I decided not to use AngularJS for this project because this is a small site, and with the exception of bootstrap (as I wanted to develop a responsive site quickly), I wanted to build a site that had been handwritten. Although I have not used AngularJS, I have adhered to the MVC principle on which AngularJS is based.
+- I decided not to use AngularJS for this project because this is a such small site, and also with the exception of bootstrap (used as I wanted to develop a responsive site quickly), I wanted to build a site that illustrated I have grasped he fundamentals. Whilst I haven't used AngularJS, I have adhered to the MVC principle on which AngularJS is based.
 
 ## How was the project deployed
 The project has been managed locally and deployed to GitHub on a regular basis, with the current site able to be viewed via GitHub Pages.
 
 ## How was the project tested
-The project has been manually tested across different browsers types, different browser sizes and on different devices. The JavaScript has been tested through Jasmine (the Jasmine test files are within the GitHub repo).
+
+###Testing Responsive Design:
+I have tested the website, across different devices, different browsers and different Operating Systems, to ensure that the site adapts cleanly/neatly to the different device criteria, summary of what I tested is below (limited to what I had available):
+- iPhone: Firefox, Chrome, Opera
+- Samsung phone: Firefox, Chrome, Opera
+- iPad: Firefox, Chrome, Opera
+- Laptop Win10: Firefox, Chrome, Opera (resizing browser window to check scalability)
+- Desktop OS X Mavericks: Firefox, Chrome, Opera (resizing browser window to check scalability)
+
+###Functional Testing
+The key elements of the testing were the different aspects of the "user story", which in essence was checking that the functionality that the user would need to use to achieve their goal, in this case looking at my photos and finding out a bit about me) worked, so I checked: 
+ - The navigation links
+ - External link (on homepage)
+ - The photo viewer
+- The contact form
+
+The tests were carried out manually, and also where possible, Jamine was just to test individual JavaScript functions, which can be viewed within the respository.
+
+
+
+
+
+
