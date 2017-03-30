@@ -49,7 +49,7 @@ The project has been managed locally and deployed to GitHub on a regular basis, 
 
 ## How was the project tested
 
-###Testing Responsive Design:
+### Testing Responsive Design:
 I have tested the website, across different devices, different browsers and different Operating Systems, to ensure that the site adapts cleanly/neatly to the different device criteria, summary of what I tested is below (limited to what I had available):
 - iPhone: Firefox, Chrome, Opera
 - Samsung phone: Firefox, Chrome, Opera
@@ -57,7 +57,7 @@ I have tested the website, across different devices, different browsers and diff
 - Laptop Win10: Firefox, Chrome, Opera (resizing browser window to check scalability)
 - Desktop OS X Mavericks: Firefox, Chrome, Opera (resizing browser window to check scalability)
 
-###Functional Testing
+### Functional Testing
 The key elements of the testing were the different aspects of the "user story", which in essence was checking that the functionality that the user would need to use to achieve their goal, in this case looking at my photos and finding out a bit about me) worked, so I checked: 
  - The navigation links
  - External link (on homepage)
