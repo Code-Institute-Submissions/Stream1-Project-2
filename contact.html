@@ -15,6 +15,7 @@
 	<link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css'/>
 	<!-- Pulling in the my CSS library -->
 	<link rel='stylesheet' type='text/css' href="css/stream1css.css">
+
 </head>
 <body>
 
@@ -54,9 +55,13 @@
 				<header class="col-sm-6">
 					<h1>Contact Me</h1>
 					<P>The form to the right would be used if you wished to contact me regarding work, it validates the input (letting the user know where any errors are) so that I could know the requested start date of the project. I previously used 'would' because the form is not operational yet, it won't send the information anywhere (as we haven't got to that part of the course) so please don't try to contact me through it at the moment.</P>
-					<figure class="text-center">
-						<img id="pigeonMail" src="img/Pigeon.jpg" class="hidden-xs" alt="Pigeon delivering mail">  	
-					</figure>
+		
+					<!-- Embedded as per -->
+					<div id="map">
+
+					</div>
+
+
 				</header>
 				<div class="col-xs-12 col-sm-6">
 					<form name="myform" action="javascript:contact.validateForm()">
@@ -90,14 +95,19 @@
 		<!-- HTML5 sematic markup -->
 		<!-- Bootstrap doesn't have a footer class, so implement own one -->
 		<footer class="text-center">
-			<h2>Website Developed by Paul Cheeseman</h2>
-			<p><em>This is a site has been developed through study with the Code Institute</em></p>
+			<h2>&copy Paul Cheeseman 2017</h2>
+			<p id="footerMSG">This is a site has been developed through study with the Code Institute</p>
 		</footer>
 	</div>
 	<script src='https://code.jquery.com/jquery.min.js'></script>
 	<script src='bootstrap/js/bootstrap.min.js'></script>
 	<!-- Site specific js -->
 	<script src='js/contactPageJS.js'></script>
+	<!-- Getting google map function from within the contacts module -->
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv5r-mFuGlcKY1QraqB4LYIAiLbfM5kKE&callback=contact.initMap">
+	</script>
+
 </body>
 </html>
 

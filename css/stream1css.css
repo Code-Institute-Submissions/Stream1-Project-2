@@ -1,10 +1,16 @@
+/*
+	This CSS has been updated using sublime autoprefixer which uses data from caniuse.com to see what vendor prefixes 
+	are required and then applies them the CSS, it will also remove prefixes that are no longer required.
+
+	To update/refresh CSS ctrl+shit+p, select 'autoprefix css'
+*/
+
 
 
 /*****************************************************************************************************************************/
 /* There is no inital media query since a "mobile first" approach is being taken and so the intial values will be used       */
 /* unless ones are subsequently set for a bigger screen size.                                                                */
 /*****************************************************************************************************************************/
-
 
 /*********************************************/
 /* Extra small devices (phones, up to 480px) */
@@ -30,6 +36,7 @@ h2  {
 
 p  {
         font-size: 1.0rem;
+        text-align: justify;
    }	
 
 li {
@@ -41,8 +48,18 @@ a.navbar-brand{
 	}
 
 footer {
-		border-top: 0.4em solid black;
+		border-top: 0.4em solid rgb(0, 0, 0);
   		margin-top: 2em;
+	}
+
+#footerMSG {
+  		text-align: center;
+  		font-style: italic;
+	}
+
+#homepageGrpPhotos{
+		border: 0.1em solid rgb(0, 0, 0);
+		border-radius: 1rem;
 	}
 
 /* Enables device font changes to be tracked across for elements not listed above */
@@ -59,10 +76,8 @@ footer {
 /* This is used to override bootstraps default styling of the navbar, so that it meets the image 
    plush, rather than having a slight gap is this border radius was kept in */
 .navbar {
-   		-webkit-border-top-right-radius: 0;
 	   	-moz-border-top-right-radius: 0;
    		border-top-right-radius: 0;
-   		-webkit-border-top-left-radius: 0;
    		-moz-border-top-left-radius: 0;
    		border-top-left-radius: 0;
 	}
@@ -82,8 +97,9 @@ footer {
 #myImg {
 		border-radius: 5px;
 		cursor: pointer;
+  		-webkit-transition: 0.3s;
   		transition: 0.3s;
-  		border: 0.3em solid black;
+  		border: 0.3em solid rgb(0, 0, 0);
   		margin-bottom: 0.6em;
 	  	width: 15em;
 	  	height: 10em;
@@ -124,7 +140,7 @@ footer {
    		width: 80%;
    		max-width: 700px;
    		text-align: center;
-   		color: #ccc;
+   		color: rgb(228, 228, 228);
    		padding: 10px 0;
    		height: 150px;
 	}
@@ -137,14 +153,10 @@ footer {
    		animation-duration: 0.6s;
 	}
 
-@-webkit-keyframes zoom {
-   		from {-webkit-transform: scale(0)} 
-   		to {-webkit-transform: scale(1)}
-	}
 
 @keyframes zoom {
-   		from {transform: scale(0.1)} 
-   		to {transform: scale(1)}
+   		from {-webkit-transform: scale(0.1);transform: scale(0.1)} 
+   		to {-webkit-transform: scale(1);transform: scale(1)}
 	}
 
 /* The Modal close Button */
@@ -152,9 +164,10 @@ footer {
    		position: absolute;
    		top: 15px;
    		right: 35px;
-   		color: #f1f1f1;
+   		color: rgb(228, 228, 228);
    		font-size: 40px;
    		font-weight: bold;
+   		-webkit-transition: 0.3s;
    		transition: 0.3s;
 	}
 
@@ -162,7 +175,7 @@ footer {
    not core to the functionality so devices that can't cater for it won't be impacted */
 .close:hover,
 .close:focus {
-    	color: #bbb;
+    	color: rgb(228, 228, 228);
     	text-decoration: none;
     	cursor: pointer;
 	}
@@ -195,7 +208,7 @@ video {
 	/* Error msg when date on form on contact page is in the past on contact page */
 #formErrorMsg{
 	margin-top: 1em;
-		color: red;
+		color: rgb(255, 0, 0);
 	}
 
 /* Message on successful form validation on contact page */
@@ -224,9 +237,9 @@ video {
 /* Reducing font to prevent wrap on minmized Chrome view */
 .photoViewerRadButn{
 	font-size: 0.7em;	
+	color: rgb(255, 255, 255);
 }
 	
-
 
 /********************************************/
 /* Small devices (tablets, 768px to 991px) */
@@ -262,11 +275,9 @@ video {
 	#headerImage{
 		/* 4px is used as that is what bootstrap uses for the responsive menu, so to tie up nicely, 
 		   using the same! */
-		margin-top: 1.0em;   
-    	-webkit-border-top-right-radius: 4px;
+		margin-top: 1.0em;
     	-moz-border-top-right-radius: 4px;
     	border-top-right-radius: 4px;
-    	-webkit-border-top-left-radius: 4px;
     	-moz-border-top-left-radius: 4px;
     	border-top-left-radius: 4px;
 	}
@@ -276,7 +287,7 @@ video {
 	#myImg {
 	  	width: 17em;
 	  	height: 10em;
-  		border: 0.4em solid black;
+  		border: 0.4em solid rgb(0, 0, 0);
   		margin-bottom: 0.6em;
 	}
 
@@ -305,16 +316,15 @@ video {
 		margin-right: 0.6rem;
 	}
 
-	#pigeonMail{
-		height: 22rem;	
-		width: 22rem;	
-		margin-left: auto;
-		margin-right: auto;
-		border-radius: 3rem;
-		border: 0.3rem solid black;
-	}
-
-
+	/* CSS for google Map */
+	#map{
+		height: 16rem;
+		width: 29rem;
+    	-moz-border-top-right-radius: 4px;
+    	border-top-right-radius: 4px;
+    	-moz-border-top-left-radius: 4px;
+    	border-top-left-radius: 4px;		
+	}	
 }
 
 
@@ -350,11 +360,9 @@ video {
 	#headerImage{
 		/* 4px is used as that is what bootstrap uses for the responsive menu, so to tie up nicely, 
 		   using the same! */
-		margin-top: 1.2em;   		   
-    	-webkit-border-top-right-radius: 4px;
+		margin-top: 1.2em;
     	-moz-border-top-right-radius: 4px;
     	border-top-right-radius: 4px;
-    	-webkit-border-top-left-radius: 4px;
     	-moz-border-top-left-radius: 4px;
     	border-top-left-radius: 4px;
 	}
@@ -363,7 +371,7 @@ video {
 	#myImg {
 	  	width: 25em;
 	  	height: 15em;
-		border: 0.5em solid black;
+		border: 0.5em solid rgb(0, 0, 0);
   		margin-bottom: 0.8em;
 	}
 
@@ -399,14 +407,15 @@ video {
 		margin-right: 0.8rem;
 	}
 
-	#pigeonMail{
-		height: 23rem;	
-		width: 23rem;	
-		margin-left: auto;
-		margin-right: auto;
-		border-radius: 3rem;
-		border: 0.4rem solid black;
-	}
+	/* CSS for google Map */
+	#map{
+		height: 18rem;
+		width: 38rem;
+    	-moz-border-top-right-radius: 4px;
+    	border-top-right-radius: 4px;
+    	-moz-border-top-left-radius: 4px;
+    	border-top-left-radius: 4px;				
+	}	
 }
 
 
@@ -439,11 +448,9 @@ video {
 	#headerImage{
 		/* 4px is used as that is what bootstrap uses for the responsive menu, so to tie up nicely, 
 		   using the same! */
-		margin-top: 1.5em;   		   
-    	-webkit-border-top-right-radius: 4px;
+		margin-top: 1.5em;
     	-moz-border-top-right-radius: 4px;
     	border-top-right-radius: 4px;
-    	-webkit-border-top-left-radius: 4px;
     	-moz-border-top-left-radius: 4px;
     	border-top-left-radius: 4px;
 	}
@@ -452,7 +459,7 @@ video {
 	#myImg {
 	  	width: 32em;
 	  	height: 20em;
-		border: 0.6em solid black;
+		border: 0.6em solid rgb(0, 0, 0);
   		margin-bottom: 1.0em;
 
 	}
@@ -490,12 +497,13 @@ video {
 		margin-right: 1rem;
 	}
 
-	#pigeonMail{
-		height: 24rem;	
-		width: 24rem;	
-		margin-left: auto;
-		margin-right: auto;
-		border-radius: 3rem;
-		border: 0.5rem solid black;
-	}	
+	/* CSS for google Map */
+	#map{
+		height: 18rem;
+		width: 46rem;
+    	-moz-border-top-right-radius: 4px;
+    	border-top-right-radius: 4px;
+    	-moz-border-top-left-radius: 4px;
+    	border-top-left-radius: 4px;				
+	}
 }

@@ -93,8 +93,17 @@ var contact = (function (){
 	function validateDay(recivedDay, currentDay){
 		var dayRtnVal;
 
+
+
+		//HTML5 form validation can't cater for this, so if month over 12, reject 
+		if (recivedDay > 31){
+			dayRtnVal = "invalid";
+			document.getElementById('formErrorMsg').innerHTML = "  Day value incorrect, please re-enter";
+			document.getElementById('formSuccess').innerHTML = "";						
+		}
+
 		//If its a valid day, have they given enough notice (set to same day at mo)
-		if (isMonthValid == "same"  && recivedDay == currentDay){
+		else if (isMonthValid == "same"  && recivedDay == currentDay){
 				document.getElementById('formErrorMsg').innerHTML = "  I'll need at least a day, please re-enter";
 				document.getElementById('formSuccess').innerHTML = "";
 				dayRtnVal = "invalid";
@@ -128,25 +137,42 @@ var contact = (function (){
 	}
 
 
-	// Returning a single function from this module/function called (well, assigned to the variable 
+
+	// Returning a function from this module/function called (well, assigned to the variable 
 	// called) 'contact', this enables access to the validate form function outside of the scope of 
-	// this module. Without passing it back, it could not be invoked.
-	return {validateForm: function(){
-		//Nested to be more efficient, no point in executing subsequent function(s) if error detected
-		isYearValid = validateYear(receivedDate().year, actualDate().year);
-		//console.log("isYearValid: " +isYearValid);
-		if (isYearValid == "same" || isYearValid == "valid"){
-			isMonthValid = validateMonth(receivedDate().month, actualDate().month);
-			//console.log("isMonthValid: " +isMonthValid);
-			if (isMonthValid  == "same" || isMonthValid  == "valid"){
-				isDayValid = validateDay(receivedDate().day, actualDate().day);
-				//console.log("isDayValid: " +isDayValid);
-				if (isDayValid == "valid"){
-					//console.log("Form is fine");
-					successfulSubMsg();
+	// this module. Without passing it back, it could not be invoked. The same applies to initMap.
+	return {
+		validateForm: function(){
+				//Nested to be more efficient, no point in executing subsequent function(s) if error detected
+				isYearValid = validateYear(receivedDate().year, actualDate().year);
+				//console.log("isYearValid: " +isYearValid);
+				if (isYearValid == "same" || isYearValid == "valid"){
+					isMonthValid = validateMonth(receivedDate().month, actualDate().month);
+					//console.log("isMonthValid: " +isMonthValid);
+					if (isMonthValid  == "same" || isMonthValid  == "valid"){
+						isDayValid = validateDay(receivedDate().day, actualDate().day);
+						//console.log("isDayValid: " +isDayValid);
+						if (isDayValid == "valid"){
+							//console.log("Form is fine");
+							successfulSubMsg();
+						}
+					}	
 				}
-			}
+			},
+		//For Google Maps
+
+
+		initMap: function() {
+ 			var uluru = {lat: 51.2823838, lng: -0.84};
+  			var map = new google.maps.Map(document.getElementById('map'), {
+    			zoom: 10,
+    			center: uluru 
+    		});
+  			var marker = new google.maps.Marker({
+	    		position: uluru,
+    			map: map
+  			});
 		}
-	}};
+	};
 
 })();

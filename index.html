@@ -57,27 +57,29 @@
 				</header>
 			</section>
 			<!-- Start with x amount and hide and reduce size as gets smaller -->
-
+			
 			<section class="row">
 				<div class="col-sm-12 text-center">
 					<h2>Selection of photos from my collection</h2>				
-					<img class="picsOnHomePage" src="img/Fleet/FleetPond2.jpg" alt="Fleet Pond Landscape Picture No.2">  
-					<img class="picsOnHomePage hidden-xs" src="img/Fleet/FleetPond6.jpg" alt="Fleet Pond Landscape Picture No.6">  
-					<img class="picsOnHomePage hidden-xs" src="img/Swanage/Swanage4.jpg" alt="Swanage Landscape Picture No.4">  	
-					<img class="picsOnHomePage hidden-xs" src="img/CaesarsCamp/CaesarsCamp7.jpg" alt="Caesars Camp Landscape Pic No.7">  				
+					<div id="homepageGrpPhotos">
+						<img class="picsOnHomePage" src="img/Fleet/FleetPond2.jpg" alt="Fleet: Bridge over pond">  
+						<img class="picsOnHomePage hidden-xs" src="img/Fleet/FleetPond6.jpg" alt="Fleet: Pond at sunset with sun showing">  
+						<img class="picsOnHomePage hidden-xs" src="img/Swanage/Swanage2.jpg" alt="Swanage: Island at Sunset no.1">  	
+						<img class="picsOnHomePage hidden-xs" src="img/CaesarsCamp/CaesarsCamp7.jpg" alt="Caesars Camp: High up with top of hill in shot">  				
+					</div>
 				</div>
 			</section>
 			<section class="row">
 				<div class="col-sm-6 col-md-3">
-					<h2>Purpose:</h2>
+					<h2>Site Purpose:</h2>
 					<p>The purpose of this website is to show some of the front-end skills I have been developing through the Full Stack Web Development course run by the Code Institute. It has the dual purpose of covering the examination requirements while also showing prospective employers what I am capable of.</p>
 				</div>
 				<div class="col-sm-6 col-md-3">
-					<h2>Content:</h2>
-					<p>The main content is on the media page is based around a hobby of mine, which is landscape photography. It’s an amateur level but hopefully some nice pictures none the less. There is a basic bio of my career and academic achievements in the profile page and a dummy contact me form in the contact page. The form will validate input, but it currently won’t send the information anywhere, so please don’t try to contact me though it.</p>
+					<h2>Site Content:</h2>
+					<p>The main content is on the media page is based around a hobby of mine, which is landscape photography. It’s at an amateur level but hopefully some nice pictures none the less. There is a basic bio of my career and academic achievements in the profile page and a dummy contact me form in the contact page. The form will validate input, but it currently won’t send the information anywhere, so please don’t try to contact me though it.</p>
 				</div>
 				<div class="col-sm-6 col-md-3">
-					<h2>Aim:</h2>
+					<h2>Site Aim:</h2>
 					<p>	My main aim has been to try and make the site as scaleable as possible. I wanted the site to look good and be useable through all possible viewing devices. Whilst there has only been a short time scale for me to complete this site (as I wish to progress with the rest of the course) I feel that I have achieved that main aim. I also wanted to implement some pure JavaScript into site and have achieved that with the the picture viewer and the additional validation I have put in for the contact me forms date field. I also wanted this site to be user friendly and believe that I have achieved that by implementing defensive programming in both the picture viewer and form input.</p>
 				</div>
 				<div class="col-sm-6 col-md-3">
@@ -90,7 +92,7 @@
 		<!-- Bootstrap doesn't have a footer class, so implement own one -->
 		<footer class="text-center">
 			<h2>Website Developed by Paul Cheeseman</h2>
-			<p><em>This is a site has been developed through study with the Code Institute</em></p>
+			<p id="footerMSG">This is a site has been developed through study with the Code Institute</p>
 		</footer>
 	</div>
 	<script src='https://code.jquery.com/jquery.min.js'></script>
