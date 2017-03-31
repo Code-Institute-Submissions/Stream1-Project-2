@@ -5,8 +5,6 @@
 	To update/refresh CSS ctrl+shit+p, select 'autoprefix css'
 */
 
-
-
 /*****************************************************************************************************************************/
 /* There is no inital media query since a "mobile first" approach is being taken and so the intial values will be used       */
 /* unless ones are subsequently set for a bigger screen size.                                                                */
@@ -20,11 +18,13 @@
 /* Declaring root elements size in an absolute/fixed value, so by using rem there is a consistent 
   	reference point from which size changes take place across devices/pages */
 body{
-    background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(255, 255, 204) 50%, rgb(255, 0, 0) 80%);
-    background: -o-linear-gradient(rgba(255, 0, 0), rgb(255, 255, 204) 50%, rgb(255, 0, 0) 80%);
-    background: linear-gradient(rgba(255, 0, 0), rgb(255, 255, 204) 50%, rgb(255, 0, 0) 80%); /* Standard syntax */
+    
+    background: linear-gradient(rgba(rgb(237, 183, 133), rgb(255, 255, 204) 50%, rgb(213, 220, 215) 65%); 
+    background: -webkit-linear-gradient(rgb(237, 183, 133), rgb(255, 255, 204) 50%, rgb(213, 220, 215) 65%);
+    background: -o-linear-gradient(rgb(237, 183, 133), rgb(255, 255, 204) 50%, rgb(213, 220, 215) 65%);
+    
 
-/* Font-family used to ensure rendering across different browsers */
+    /* Font-family used to ensure rendering across different browsers */
 	font-family: Tahoma, Geneva, sans-serif;
 }
 	
@@ -70,11 +70,6 @@ footer {
   		font-style: italic;
 	}
 
-#homepageGrpPhotos{
-		border: 0.1em solid rgb(0, 0, 0);
-		border-radius: 1rem;
-	}
-
 /* Enables device font changes to be tracked across for elements not listed above */
 .trackFontChange  {
         font-size: 1.0rem;
@@ -98,6 +93,7 @@ footer {
 /* Responsive image header settings*/
 #headerImage{
 		margin-top: 0.5em;
+		margin-bottom: 0.1em;
 		width:100%;
 		background-repeat: no-repeat;
   		background-size: cover;
@@ -196,7 +192,7 @@ footer {
 
 .mediaPageBackgrounds{
 		/* background-color: rgb(228, 228, 228);	*/
-		background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+		background-color: rgba(211,117,61,0.2); /* Black w/ opacity */
 		padding: 0.6em;
 		border-radius: 4px;
 	}
@@ -212,7 +208,8 @@ footer {
 /* From W3C - If the max-width property is set to 100%, the video player will scale down if it has to, 
    but never scale up to be larger than its original size: */
 video {
-    	max-width: 50%;
+		margin: 0.25rem;
+    	max-width: 95%;
     	height: auto;
 	}
 

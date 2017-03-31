@@ -28,10 +28,6 @@ This code is for a site that is required for the Code Institute end of Stream 1 
 - **JavaScript concepts:**
 The different sections of JavaScript are modularised by encapsulating the associated functions and variables within an outer module/function. Where external access is needed to the encapsulated JavaScript functions (on the contact page), the code uses JavaScript closure and returns the required functions. This approach ensures better maintainability of code within each module, ensures the global variable space isn't polluted and keeps the modules variables/functions safe from variable pollution from other code.
 
-- **Model/View/Controller:**
-I have split out the data (arrays of photos) from code as I wished to follow the MVC principle of splitting out the *View* (HTML/CSS), the *Model*/Data (arrays of photos) and *Controller* (JavaScript logic).
-
-
 
 #### 3rd party code used:
 - I used the image model viewer from W3C (https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img), although I have heavily adapted it. The original was designed for one photo to be launched, I have developed it to use different arrays enabling the use of previous/next selectors and locations to be chosen.
@@ -49,6 +45,9 @@ The project has been managed locally and deployed to GitHub on a regular basis, 
 
 ## How was the project tested
 
+### Testing code quality
+I validated the HTML used through https://validator.w3.org
+
 ### Testing Responsive Design:
 I have tested the website, across different devices, different browsers and different Operating Systems, to ensure that the site adapts cleanly/neatly to the different device criteria, summary of what I tested is below (limited to what I had available):
 - iPhone: Firefox, Chrome, Opera
@@ -64,10 +63,4 @@ The key elements of the testing were the different aspects of the "user story", 
  - The photo viewer
 - The contact form
 
-The tests were carried out manually, and also where possible, Jamine was just to test individual JavaScript functions, and the tests can be viewed within the respository.
-
-
-
-
-
-
+The above tests were carried out manually, and also where possible, Jamine was just to test individual JavaScript functions, and the tests can be viewed within the project respository.
