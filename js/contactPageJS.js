@@ -38,16 +38,32 @@ var contact = (function (){
 		};
 	}
 
+
+
+	function isYearInFuture(receivedYear, currentYear){
+		if (receivedYear > currentYear){
+			return true;
+		}
+	}
+
+
+	function isYearSame(receivedYear, currentYear){
+		if (receivedYear == currentYear){
+			return true;
+		}
+	}
+
+
 	//Validating year, 'same' value is required for subsequent processing/comparison
 	function validateYear(receivedYear, currentYear){
 		var yrRtnVal;
 
 		//If in the future all good
-		if (receivedYear > currentYear){
+		if (isYearInFuture(receivedYear, currentYear)){
 			yrRtnVal = "valid";
 		}
 		//Need to flag same year as month & day validation required
-		else if (receivedYear == currentYear){
+		else if (isYearSame(receivedYear, currentYear)){
 			yrRtnVal = "same";
 		}
 		else{
@@ -59,6 +75,24 @@ var contact = (function (){
 	}
 
 
+	function isMonthOverTwelve(receivedMonth){
+		if (receivedMonth > 12){
+			return true;
+		}	
+	}
+
+
+	function isMonthInPast(receivedMonth, currentMonth){
+		if (isYearValid == "same" && receivedMonth < currentMonth){
+			return true;
+		}
+	}
+
+	function isMonthSame(receivedMonth, currentMonth){
+		if (isYearValid == "same" && receivedMonth == currentMonth){
+			return true;
+		}
+	}
 
 	//Validating month, 'same' value is required for subsequent processing/comparison
 	//additional validation put in to prevent month value of over 12 being deemed valid
@@ -66,19 +100,19 @@ var contact = (function (){
 		var mthRtnVal;
 
 		//HTML5 form validation can't cater for this, so if month over 12, reject 
-		if (receivedMonth > 12){
+		if (isMonthOverTwelve(receivedMonth)){
 			mthRtnVal = "invalid";
 			document.getElementById('formErrorMsg').innerHTML = "  Month value incorrect, please re-enter";
 			document.getElementById('formSuccess').innerHTML = "";						
 		}
 		//If in the future all good
-		else if (isYearValid == "same" && receivedMonth < currentMonth){
+		else if (isMonthInPast(receivedMonth, currentMonth)){
 			mthRtnVal = "invalid";
 			document.getElementById('formErrorMsg').innerHTML = "  Date in the past, please re-enter";
 			document.getElementById('formSuccess').innerHTML = "";			
 		} 
 		//Need to flag same year as month & day validation required
-		else if (isYearValid == "same" && receivedMonth == currentMonth){
+		else if (isMonthSame(receivedMonth, currentMonth)){
 			mthRtnVal = "same";
 		} 
 		else{
@@ -88,29 +122,51 @@ var contact = (function (){
 	}
 
 
+	function isDayOverThirtyOne(recivedDay){
+		if (recivedDay > 31){
+			return true;
+		}	
+	}
+
+
+	function notEnoughNotice(recivedDay, currentDay){
+		/* could just put an offset on the current day to increase required notice period */
+		if (isMonthValid == "same"  && recivedDay == currentDay){
+			/* returns true if NOT enough notice */
+			return true;
+		}	
+	}
+
+
+	function isDayInPast(receivedDay, currentDay){
+		if (isMonthValid == "same" && receivedDay < currentDay){
+			return true;
+		}
+	}
+
+
 	//Validating day, checks that day is not from past and also has functionality to check that 
 	//enough notice has been given.
 	function validateDay(recivedDay, currentDay){
 		var dayRtnVal;
 
-
-
 		//HTML5 form validation can't cater for this, so if month over 12, reject 
-		if (recivedDay > 31){
+		if (isDayOverThirtyOne(recivedDay)){
 			dayRtnVal = "invalid";
 			document.getElementById('formErrorMsg').innerHTML = "  Day value incorrect, please re-enter";
 			document.getElementById('formSuccess').innerHTML = "";						
 		}
 
+
 		//If its a valid day, have they given enough notice (set to same day at mo)
-		else if (isMonthValid == "same"  && recivedDay == currentDay){
+		else if (notEnoughNotice(recivedDay, currentDay)){
 				document.getElementById('formErrorMsg').innerHTML = "  I'll need at least a day, please re-enter";
 				document.getElementById('formSuccess').innerHTML = "";
 				dayRtnVal = "invalid";
 			}
 
 		//If in the future all good, else reject
-		else if (isMonthValid == "same" && recivedDay < currentDay){
+		else if (isDayInPast(recivedDay, currentDay)){
 			dayRtnVal = "invalid";
 			document.getElementById('formErrorMsg').innerHTML = "  Date in the past, please re-enter";
 			document.getElementById('formSuccess').innerHTML = "";			
@@ -119,7 +175,6 @@ var contact = (function (){
 		else{
 			dayRtnVal = "valid";
 		}
-
 		return dayRtnVal;
 	}
 
@@ -163,13 +218,13 @@ var contact = (function (){
 
 
 		initMap: function() {
- 			var uluru = {lat: 51.2823838, lng: -0.84};
+ 			var fleet = {lat: 51.2823838, lng: -0.84};
   			var map = new google.maps.Map(document.getElementById('map'), {
     			zoom: 10,
-    			center: uluru 
+    			center: fleet 
     		});
   			var marker = new google.maps.Marker({
-	    		position: uluru,
+	    		position: fleet,
     			map: map
   			});
 		}

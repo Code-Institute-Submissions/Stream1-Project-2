@@ -64,7 +64,7 @@ The key elements of the testing were the different aspects of the "user story", 
  - The photo viewer
 - The contact form
 
-The tests were carried out manually, and also where possible, Jamine was just to test individual JavaScript functions, which can be viewed within the respository.
+The tests were carried out manually, and also where possible, Jamine was just to test individual JavaScript functions, and the tests can be viewed within the respository.
 
 
 

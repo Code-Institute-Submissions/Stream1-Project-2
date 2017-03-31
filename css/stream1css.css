@@ -19,8 +19,21 @@
 
 /* Declaring root elements size in an absolute/fixed value, so by using rem there is a consistent 
   	reference point from which size changes take place across devices/pages */
+body{
+    background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(255, 255, 204) 50%, rgb(255, 0, 0) 80%);
+    background: -o-linear-gradient(rgba(255, 0, 0), rgb(255, 255, 204) 50%, rgb(255, 0, 0) 80%);
+    background: linear-gradient(rgba(255, 0, 0), rgb(255, 255, 204) 50%, rgb(255, 0, 0) 80%); /* Standard syntax */
+
+/* Font-family used to ensure rendering across different browsers */
+	font-family: Tahoma, Geneva, sans-serif;
+}
+	
+
+
+
 html {
 		font-size: 12px;
+
 	}
 
 /* Overriding boostraps default settings so that text is more responsive to different devices */
@@ -320,10 +333,6 @@ video {
 	#map{
 		height: 16rem;
 		width: 29rem;
-    	-moz-border-top-right-radius: 4px;
-    	border-top-right-radius: 4px;
-    	-moz-border-top-left-radius: 4px;
-    	border-top-left-radius: 4px;		
 	}	
 }
 
@@ -411,10 +420,6 @@ video {
 	#map{
 		height: 18rem;
 		width: 38rem;
-    	-moz-border-top-right-radius: 4px;
-    	border-top-right-radius: 4px;
-    	-moz-border-top-left-radius: 4px;
-    	border-top-left-radius: 4px;				
 	}	
 }
 
@@ -499,11 +504,7 @@ video {
 
 	/* CSS for google Map */
 	#map{
-		height: 18rem;
+		height: rem;
 		width: 46rem;
-    	-moz-border-top-right-radius: 4px;
-    	border-top-right-radius: 4px;
-    	-moz-border-top-left-radius: 4px;
-    	border-top-left-radius: 4px;				
 	}
 }
