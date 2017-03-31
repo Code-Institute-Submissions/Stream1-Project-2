@@ -137,6 +137,13 @@
 		}	
 	}
 
+	/* A debug function to help out with Jasmine not working */
+	function notEnoughNoticeTest(recivedDay, currentDay){
+		if (recivedDay == currentDay){
+			return true;
+		}	
+	}
+
 
 	function isDayInPast(receivedDay, currentDay){
 		if (isMonthValid == "same" && receivedDay < currentDay){
