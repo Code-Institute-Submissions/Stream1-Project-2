@@ -18,13 +18,12 @@
 /* Declaring root elements size in an absolute/fixed value, so by using rem there is a consistent 
   	reference point from which size changes take place across devices/pages */
 body{
-    
-    background: linear-gradient(rgba(rgb(237, 183, 133), rgb(255, 255, 204) 50%, rgb(213, 220, 215) 65%); 
-    background: -webkit-linear-gradient(rgb(237, 183, 133), rgb(255, 255, 204) 50%, rgb(213, 220, 215) 65%);
-    background: -o-linear-gradient(rgb(237, 183, 133), rgb(255, 255, 204) 50%, rgb(213, 220, 215) 65%);
-    
 
-    /* Font-family used to ensure rendering across different browsers */
+    background: linear-gradient(rgb(237, 183, 133), rgb(255, 255, 204) 50%, rgb(213, 220, 215) 65%);     
+    background: -webkit-linear-gradient(rgb(237, 183, 133), rgb(255, 255, 204) 50%, rgb(213, 220, 215) 65%);
+	background: -o-linear-gradient(rgb(237, 183, 133), rgb(255, 255, 204) 50%, rgb(213, 220, 215) 65%);
+
+	/* Font-family used to ensure rendering across different browsers */
 	font-family: Tahoma, Geneva, sans-serif;
 }
 	
