@@ -214,9 +214,9 @@ var contact = (function (){
 					}	
 				}
 			},
+
+
 		//For Google Maps
-
-
 		initMap: function() {
  			var fleet = {lat: 51.2823838, lng: -0.84};
   			var map = new google.maps.Map(document.getElementById('map'), {

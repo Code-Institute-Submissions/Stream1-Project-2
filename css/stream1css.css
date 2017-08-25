@@ -28,6 +28,11 @@ body{
 }
 	
 
+connection {
+    border: 30px solid #b51c29;
+    border-radius: 50px;
+}
+
 
 
 html {

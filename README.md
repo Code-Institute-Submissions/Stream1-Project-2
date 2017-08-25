@@ -32,13 +32,13 @@ The different sections of JavaScript are modularised by encapsulating the associ
 #### 3rd party code used:
 - I used the image model viewer from W3C (https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img), although I have heavily adapted it. The original was designed for one photo to be launched, I have developed it to use different arrays enabling the use of previous/next selectors and locations to be chosen.
 
-- I used a bootstrap responsive menu, although I have adapted from its default design to make it more responsive. In this site the text shown on the menu will change size depending on the viewing device. In addition, where applicable, I changed the default Bootstrap div elements as HTML5 semantic elements for improved usability.
+- I used a default bootstrap responsive menu, although I have adapted it from its default design to make it more responsive. In this site the text shown on the menu will change size depending on the viewing device. In addition, where applicable, I changed the default Bootstrap div elements as HTML5 semantic elements for improved usability.
 
 
 #### Justification of approach
 - I decided to use JavaScript rather tha jQuery as I wished to understand some of the underlying language that supports the jQuery library, rather than start using jQuery immediately.
 
-- I decided not to use AngularJS for this project because this is a such small site, and also with the exception of bootstrap (used as I wanted to develop a responsive site quickly), I wanted to build a site that illustrated I have grasped he fundamentals. Whilst I haven't used AngularJS, I have adhered to the MVC principle on which AngularJS is based.
+- I decided not to use AngularJS for this project because this is a such small site, and also with the exception of bootstrap (used as I wanted to develop a responsive site quickly), I wanted to build a site that illustrated I have grasped he fundamentals.
 
 ## How was the project deployed
 The project has been managed locally and deployed to GitHub on a regular basis, with the current site able to be viewed via GitHub Pages.
