@@ -75,41 +75,6 @@ describe("Contact Page Testing", function() {
       expect(isDayOverThirtyOne(20)).toBeUndefined();
     });
 
-
-    it("Jasmine debug test", function() {
-      isMonthValid = 'same';
-      expect(notEnoughNoticeTest(20, 20)).toBe(true);
-    });
-
-    it("should return 'true' if var 'monthValid is 'same' and the recieved day is the same as the current day", function() {
-      isMonthValid = 'same';
-      console.log("isMonthValid-before: " +isMonthValid);
-      expect(notEnoughNotice(20, 20)).toBe(true);
-      console.log("isMonthValid-after: " +isMonthValid);      
-    });
-    /* 
-
-    it("should return 'undefined' if var 'monthValid is NOT 'same' and the recieved day is the same as the current day", function() {
-      var isMonthValid = 'NOTRequiredVal';
-      console.log("isMonthValid: " +isMonthValid);
-      expect(notEnoughNotice(20, 20)).toBe(true);
-    });
-
-    it("should return 'undefined' if var 'monthValid is 'same' and the recieved day is NOT the same as the current day", function() {
-      var isMonthValid = 'same';
-      console.log("isMonthValid: " +isMonthValid);
-      expect(notEnoughNotice(20, 18)).toBe(true);
-    });
-
-    */
-
-
-
-
-
   });
-
-
-
 
 });
