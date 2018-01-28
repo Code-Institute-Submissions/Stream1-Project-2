@@ -484,7 +484,7 @@ video {
 
 	/* Reduce modal content size to better fit screen */
 	.modal-content {
-     	width: 60%;
+     	width: 50%;
    	}
 
 	.picsOnHomePage{
