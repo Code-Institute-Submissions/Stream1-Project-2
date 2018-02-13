@@ -1,7 +1,7 @@
 # Code Institute Stream 1 Project
 
 ## Overview
-This site is required for the Code Institute end of Stream 1 (Front end) project. It is to demonstrate an ability to code, test and deploy (to GitHub) a basic website that follows good practice. The website has the dual purpose of covering examination requirements while also illustrating my level of knowledge/competency to prospective employers.
+This site is required for the Code Institute end of Stream 1 (Front end) project. It is to demonstrate an ability to code, test and deploy (to GitHub) a basic website that follows good practice.
 
 
 ## Functionality of the project
