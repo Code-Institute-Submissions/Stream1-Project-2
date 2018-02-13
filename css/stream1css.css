@@ -125,7 +125,7 @@ footer {
 
 
 /* The Modal (and hiding it) */
-.modal {
+.modal.myModal {
 		display: none; /* Hidden by default */
 		position: fixed; /* Stay in place */
 		z-index: 1; /* Sit on top */
@@ -164,6 +164,28 @@ footer {
    		animation-name: zoom;
    		animation-duration: 0.6s;
 	}
+
+
+
+.modal-backdrop {
+    z-index: 0;
+}
+
+#contactModal .modal-header{
+	background-color: rgb(0, 102, 0);
+	border: 0px;
+	color: white;
+	text-align: center;
+}
+
+#contactModal .modal-footer{
+	background-color: rgb(0, 102, 0);
+	padding-top: 0px;
+	border: 0px;
+	color: white;
+	text-align: center;
+}
+
 
 
 @keyframes zoom {
