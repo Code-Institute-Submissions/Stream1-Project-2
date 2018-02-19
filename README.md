@@ -1,7 +1,7 @@
 # Code Institute Stream 1 Project
 
 ## Overview
-This site is required for the Code Institute end of Stream 1 (Front end) project https://paul-cheeseman.github.io/Stream1-Project/index.html. It fulfils my need to have a portfolio site which (using my interest in photgraghy demonstrates an ability to code, test and deploy (to GitHub) a basic website that follows good practice.
+This site is required for the Code Institute end of Stream 1 (Front end) project https://paul-cheeseman.github.io/Stream1-Project/index.html. It fulfils my need to have a portfolio site which (using my interest in photography) demonstrates an ability to code, test and deploy (to GitHub) a basic website that follows good practice.
 
 ## Functionality of the project
  - The main aspect of the site is the JavaScript photo viewer which enables the user to cycle through photos based on the different locations from which they were taken and the user can enlarge the photos when selected if desired. I deliberately didn't use the bootstrap carousel because I wanted to set myself the JavaScript challenge of producing my own viewer.
